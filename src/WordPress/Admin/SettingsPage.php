@@ -27,8 +27,8 @@ final class SettingsPage
     public function register(): void
     {
         add_options_page(
-            __('WP Captcha Shield', 'wp-captcha-shield'),
-            __('WP Captcha Shield', 'wp-captcha-shield'),
+            __('Captcha Security Shield', 'captcha-security-shield'),
+            __('Captcha Security Shield', 'captcha-security-shield'),
             'manage_options',
             self::PAGE_SLUG,
             [$this, 'render'],
@@ -63,7 +63,7 @@ final class SettingsPage
             wp_die(
                 esc_html__(
                     'You are not allowed to manage these settings.',
-                    'wp-captcha-shield',
+                    'captcha-security-shield',
                 ),
             );
         }

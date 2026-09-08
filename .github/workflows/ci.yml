@@ -102,7 +102,7 @@ jobs:
         uses: codecov/codecov-action@v5
         with:
           token: ${{ secrets.CODECOV_TOKEN }}
-          slug: velukuberan/wp-captcha-shield
+          slug: velukuberan/captcha-security-shield
           files: coverage/clover.xml
           flags: unit
           fail_ci_if_error: true

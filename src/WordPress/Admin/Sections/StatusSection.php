@@ -25,7 +25,7 @@ final class StatusSection implements SettingsTabSection
 
     public function label(): string
     {
-        return __('Status', 'wp-captcha-shield');
+        return __('Status', 'captcha-security-shield');
     }
 
     public function showsSubmitButton(): bool
@@ -40,32 +40,32 @@ final class StatusSection implements SettingsTabSection
         $wordpressVersion = get_bloginfo('version');
         $wooCommerceVersion = defined('WC_VERSION') ? WC_VERSION : null;
         ?>
-        <h2><?php echo esc_html__('Status and compatibility', 'wp-captcha-shield'); ?></h2>
+        <h2><?php echo esc_html__('Status and compatibility', 'captcha-security-shield'); ?></h2>
         <p class="description">
             <?php echo esc_html__(
-                'Compare the current environment with the minimum versions supported by WP Captcha Shield.',
-                'wp-captcha-shield',
+                'Compare the current environment with the minimum versions supported by Captcha Security Shield.',
+                'captcha-security-shield',
             ); ?>
         </p>
         <table class="widefat striped wp-captcha-shield-status-table">
             <thead>
                 <tr>
-                    <th scope="col"><?php echo esc_html__('Component', 'wp-captcha-shield'); ?></th>
-                    <th scope="col"><?php echo esc_html__('Minimum supported', 'wp-captcha-shield'); ?></th>
-                    <th scope="col"><?php echo esc_html__('Current', 'wp-captcha-shield'); ?></th>
-                    <th scope="col"><?php echo esc_html__('Status', 'wp-captcha-shield'); ?></th>
+                    <th scope="col"><?php echo esc_html__('Component', 'captcha-security-shield'); ?></th>
+                    <th scope="col"><?php echo esc_html__('Minimum supported', 'captcha-security-shield'); ?></th>
+                    <th scope="col"><?php echo esc_html__('Current', 'captcha-security-shield'); ?></th>
+                    <th scope="col"><?php echo esc_html__('Status', 'captcha-security-shield'); ?></th>
                 </tr>
             </thead>
             <tbody>
                 <?php
                 $this->renderStatusRow(
-                    __('PHP', 'wp-captcha-shield'),
+                    __('PHP', 'captcha-security-shield'),
                     self::MINIMUM_PHP_VERSION,
                     PHP_VERSION,
                     $this->compatibility->isAtLeast(PHP_VERSION, self::MINIMUM_PHP_VERSION),
                 );
                 $this->renderStatusRow(
-                    __('WordPress', 'wp-captcha-shield'),
+                    __('WordPress', 'captcha-security-shield'),
                     self::MINIMUM_WORDPRESS_VERSION,
                     $wordpressVersion,
                     $this->compatibility->isAtLeast($wordpressVersion, self::MINIMUM_WORDPRESS_VERSION),
@@ -73,14 +73,14 @@ final class StatusSection implements SettingsTabSection
 
                 if ($wooCommerceVersion === null) {
                     $this->renderStatusRow(
-                        __('WooCommerce', 'wp-captcha-shield'),
+                        __('WooCommerce', 'captcha-security-shield'),
                         self::MINIMUM_WOOCOMMERCE_VERSION,
-                        __('Not active', 'wp-captcha-shield'),
+                        __('Not active', 'captcha-security-shield'),
                         null,
                     );
                 } else {
                     $this->renderStatusRow(
-                        __('WooCommerce', 'wp-captcha-shield'),
+                        __('WooCommerce', 'captcha-security-shield'),
                         self::MINIMUM_WOOCOMMERCE_VERSION,
                         $wooCommerceVersion,
                         $this->compatibility->isAtLeast($wooCommerceVersion, self::MINIMUM_WOOCOMMERCE_VERSION),
@@ -92,14 +92,14 @@ final class StatusSection implements SettingsTabSection
         <p class="description">
             <?php echo esc_html__(
                 'WooCommerce is optional. WordPress form protection remains available when WooCommerce is not active.',
-                'wp-captcha-shield',
+                'captcha-security-shield',
             ); ?>
         </p>
 
         <p class="description">
             <?php echo esc_html__(
                 'WooCommerce versions below 10.1.0 are outside the supported compatibility range.',
-                'wp-captcha-shield',
+                'captcha-security-shield',
             ); ?>
         </p>
         <?php
@@ -111,14 +111,14 @@ final class StatusSection implements SettingsTabSection
         string $currentVersion,
         ?bool $compatible,
     ): void {
-        $status = __('Optional', 'wp-captcha-shield');
+        $status = __('Optional', 'captcha-security-shield');
         $statusClass = 'is-optional';
 
         if ($compatible === true) {
-            $status = __('Compatible', 'wp-captcha-shield');
+            $status = __('Compatible', 'captcha-security-shield');
             $statusClass = 'is-compatible';
         } elseif ($compatible === false) {
-            $status = __('Unsupported', 'wp-captcha-shield');
+            $status = __('Unsupported', 'captcha-security-shield');
             $statusClass = 'is-unsupported';
         }
         ?>

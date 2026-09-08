@@ -27,7 +27,7 @@ final class SettingsPageView
         ?>
         <div class="wrap wp-captcha-shield-settings">
             <h1>
-                <?php echo esc_html__('WP Captcha Shield', 'wp-captcha-shield'); ?>
+                <?php echo esc_html__('Captcha Security Shield', 'captcha-security-shield'); ?>
             </h1>
 
             <?php
@@ -48,7 +48,7 @@ final class SettingsPageView
                     <p>
                         <?php echo esc_html__(
                             'Settings saved.',
-                            'wp-captcha-shield',
+                            'captcha-security-shield',
                         ); ?>
                     </p>
                 </div>
@@ -90,7 +90,7 @@ final class SettingsPageView
         <nav
             class="nav-tab-wrapper wp-captcha-shield-tabs"
             role="tablist"
-            aria-label="<?php echo esc_attr__('WP Captcha Shield settings', 'wp-captcha-shield'); ?>"
+            aria-label="<?php echo esc_attr__('Captcha Security Shield settings', 'captcha-security-shield'); ?>"
         >
             <?php foreach ($this->sections as $index => $section): ?>
                 <?php $isActive = $index === 0; ?>
@@ -119,7 +119,7 @@ final class SettingsPageView
             $settings->turnstile()->siteKey() === ''
             || $settings->turnstile()->secretKey() === ''
         ) {
-            $warnings[] = __('Cloudflare Turnstile configuration is incomplete.', 'wp-captcha-shield');
+            $warnings[] = __('Cloudflare Turnstile configuration is incomplete.', 'captcha-security-shield');
         }
 
         if (
@@ -127,14 +127,14 @@ final class SettingsPageView
             || $settings->googleRecaptcha()->apiKey() === ''
             || $settings->googleRecaptcha()->siteKey() === ''
         ) {
-            $warnings[] = __('Google reCAPTCHA configuration is incomplete.', 'wp-captcha-shield');
+            $warnings[] = __('Google reCAPTCHA configuration is incomplete.', 'captcha-security-shield');
         }
 
         if (
             $settings->hCaptcha()->siteKey() === ''
             || $settings->hCaptcha()->secretKey() === ''
         ) {
-            $warnings[] = __('hCaptcha configuration is incomplete.', 'wp-captcha-shield');
+            $warnings[] = __('hCaptcha configuration is incomplete.', 'captcha-security-shield');
         }
 
         foreach ($warnings as $warning) {

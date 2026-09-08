@@ -27,7 +27,7 @@ final class GeneralSettingsSection implements SettingsTabSection
 
     public function label(): string
     {
-        return __('General', 'wp-captcha-shield');
+        return __('General', 'captcha-security-shield');
     }
 
     public function showsSubmitButton(): bool
@@ -41,7 +41,7 @@ final class GeneralSettingsSection implements SettingsTabSection
             ?? 'disabled';
         ?>
         <h2>
-            <?php echo esc_html__('General settings', 'wp-captcha-shield'); ?>
+            <?php echo esc_html__('General settings', 'captcha-security-shield'); ?>
         </h2>
         <table class="form-table" role="presentation">
             <tr>
@@ -49,7 +49,7 @@ final class GeneralSettingsSection implements SettingsTabSection
                     <?php
                     $this->fields->renderFieldLabel(
                         'wp-captcha-shield-global-provider',
-                        __('Default provider', 'wp-captcha-shield'),
+                        __('Default provider', 'captcha-security-shield'),
                     );
                     ?>
                 </th>
@@ -63,11 +63,11 @@ final class GeneralSettingsSection implements SettingsTabSection
                     <?php
                     $this->fields->renderFieldHelp(
                         'wp-captcha-shield-global-provider',
-                        __('Default provider', 'wp-captcha-shield'),
+                        __('Default provider', 'captcha-security-shield'),
                         __(
                             'Used by forms configured to “Use default”. Individual forms '
                             . 'can override this setting.',
-                            'wp-captcha-shield',
+                            'captcha-security-shield',
                         ),
                     );
                     ?>
@@ -78,12 +78,12 @@ final class GeneralSettingsSection implements SettingsTabSection
         <?php
         $this->renderFormSettingsGroup(
             $settings,
-            __('WordPress forms', 'wp-captcha-shield'),
+            __('WordPress forms', 'captcha-security-shield'),
             false,
         );
         $this->renderFormSettingsGroup(
             $settings,
-            __('WooCommerce forms', 'wp-captcha-shield'),
+            __('WooCommerce forms', 'captcha-security-shield'),
             true,
         );
     }
@@ -115,12 +115,12 @@ final class GeneralSettingsSection implements SettingsTabSection
                     ? __(
                         'Protects both Classic Checkout and Checkout Block. '
                         . '“Use default” inherits the Default provider setting.',
-                        'wp-captcha-shield',
+                        'captcha-security-shield',
                     )
                     : __(
                         'Choose the CAPTCHA provider for this form. “Use default” '
                         . 'inherits the Default provider setting.',
-                        'wp-captcha-shield',
+                        'captcha-security-shield',
                     );
                 ?>
                 <tr>
@@ -141,7 +141,7 @@ final class GeneralSettingsSection implements SettingsTabSection
                                 value="default"
                                 <?php selected($formValue, 'default'); ?>
                             >
-                                <?php echo esc_html__('Use default', 'wp-captcha-shield'); ?>
+                                <?php echo esc_html__('Use default', 'captcha-security-shield'); ?>
                             </option>
                             <?php $this->renderProviderOptions($formValue, true); ?>
                         </select>
@@ -166,15 +166,15 @@ final class GeneralSettingsSection implements SettingsTabSection
         if ($includeDisabled) {
             ?>
             <option value="disabled" <?php selected($selectedValue, 'disabled'); ?>>
-                <?php echo esc_html__('Disabled', 'wp-captcha-shield'); ?>
+                <?php echo esc_html__('Disabled', 'captcha-security-shield'); ?>
             </option>
             <?php
         }
 
         $providers = [
-            CaptchaProvider::CloudflareTurnstile->value => __('Cloudflare Turnstile', 'wp-captcha-shield'),
-            CaptchaProvider::GoogleRecaptcha->value => __('Google reCAPTCHA', 'wp-captcha-shield'),
-            CaptchaProvider::HCaptcha->value => __('hCaptcha', 'wp-captcha-shield'),
+            CaptchaProvider::CloudflareTurnstile->value => __('Cloudflare Turnstile', 'captcha-security-shield'),
+            CaptchaProvider::GoogleRecaptcha->value => __('Google reCAPTCHA', 'captcha-security-shield'),
+            CaptchaProvider::HCaptcha->value => __('hCaptcha', 'captcha-security-shield'),
         ];
 
         foreach ($providers as $value => $label) {
