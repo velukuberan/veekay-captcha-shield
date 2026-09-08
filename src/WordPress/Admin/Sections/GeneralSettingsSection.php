@@ -65,8 +65,8 @@ final class GeneralSettingsSection implements SettingsTabSection
                         'wp-captcha-shield-global-provider',
                         __('Default provider', 'captcha-security-shield'),
                         __(
-                            'Used by forms configured to “Use default”. Individual forms '
-                            . 'can override this setting.',
+                            // phpcs:ignore Generic.Files.LineLength.TooLong
+                            'Used by forms configured to “Use default”. Individual forms can override this setting.',
                             'captcha-security-shield',
                         ),
                     );
@@ -113,13 +113,13 @@ final class GeneralSettingsSection implements SettingsTabSection
                 $formValue = $this->formSettingValue($setting);
                 $help = str_ends_with($formId, '_checkout')
                     ? __(
-                        'Protects both Classic Checkout and Checkout Block. '
-                        . '“Use default” inherits the Default provider setting.',
+                        // phpcs:ignore Generic.Files.LineLength.TooLong
+                        'Protects both Classic Checkout and Checkout Block. “Use default” inherits the Default provider setting.',
                         'captcha-security-shield',
                     )
                     : __(
-                        'Choose the CAPTCHA provider for this form. “Use default” '
-                        . 'inherits the Default provider setting.',
+                        // phpcs:ignore Generic.Files.LineLength.TooLong
+                        'Choose the CAPTCHA provider for this form. “Use default” inherits the Default provider setting.',
                         'captcha-security-shield',
                     );
                 ?>

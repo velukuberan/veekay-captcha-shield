@@ -48,9 +48,8 @@ final class TurnstileSettingsSection implements SettingsTabSection
 
         <p class="description">
             <?php echo esc_html__(
-                'Select the same mode here as the mode configured for this '
-                . 'site key. Changing this setting does not change the '
-                . 'widget mode in Cloudflare.',
+                // phpcs:ignore Generic.Files.LineLength.TooLong
+                'Select the same mode here as the mode configured for this site key. Changing this setting does not change the widget mode in Cloudflare.',
                 'captcha-security-shield',
             ); ?>
         </p>
@@ -90,8 +89,8 @@ final class TurnstileSettingsSection implements SettingsTabSection
                     'invisible' => __('Invisible', 'captcha-security-shield'),
                 ],
                 __(
-                    'Must match the widget mode configured for this site key in '
-                    . 'Cloudflare. Managed is recommended for most sites.',
+                    // phpcs:ignore Generic.Files.LineLength.TooLong
+                    'Must match the widget mode configured for this site key in Cloudflare. Managed is recommended for most sites.',
                     'captcha-security-shield',
                 ),
             );
@@ -108,10 +107,8 @@ final class TurnstileSettingsSection implements SettingsTabSection
                                     wp_kses(
                                         /* translators: %s: URL to the Cloudflare Turnstile Privacy Addendum. */
                                         __(
-                                            'Cloudflare requires websites using Invisible Turnstile to '
-                                            . 'reference the <a href="%s" target="_blank" '
-                                            . 'rel="noopener noreferrer">Turnstile Privacy '
-                                            . 'Addendum</a> in their privacy policy.',
+                                            // phpcs:ignore Generic.Files.LineLength.TooLong
+                                            'Cloudflare requires websites using Invisible Turnstile to reference the <a href="%s" target="_blank" rel="noopener noreferrer">Turnstile Privacy Addendum</a> in their privacy policy.',
                                             'captcha-security-shield',
                                         ),
                                         [

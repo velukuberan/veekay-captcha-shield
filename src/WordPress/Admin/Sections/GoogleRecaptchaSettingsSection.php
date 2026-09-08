@@ -80,6 +80,7 @@ final class GoogleRecaptchaSettingsSection implements SettingsTabSection
                     'invisible' => __('Invisible', 'captcha-security-shield'),
                 ],
                 __(
+                    // phpcs:ignore Generic.Files.LineLength.TooLong
                     'Determines how reCAPTCHA interacts with visitors. Score-based is recommended for most sites.',
                     'captcha-security-shield',
                 ),
@@ -95,9 +96,8 @@ final class GoogleRecaptchaSettingsSection implements SettingsTabSection
                 '1',
                 '0.1',
                 __(
-                    'Minimum acceptable score for score-based verification. '
-                    . 'Higher values are stricter. Use a value between 0 '
-                    . 'and 1.',
+                    // phpcs:ignore Generic.Files.LineLength.TooLong
+                    'Minimum acceptable score for score-based verification. Higher values are stricter. Use a value between 0 and 1.',
                     'captcha-security-shield',
                 ),
             );
