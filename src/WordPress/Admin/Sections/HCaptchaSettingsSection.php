@@ -21,7 +21,7 @@ final class HCaptchaSettingsSection implements SettingsTabSection
 
     public function label(): string
     {
-        return __('hCaptcha', 'wp-captcha-shield');
+        return __('hCaptcha', 'captcha-security-shield');
     }
 
     public function showsSubmitButton(): bool
@@ -33,43 +33,43 @@ final class HCaptchaSettingsSection implements SettingsTabSection
     {
         $hCaptcha = $settings->hCaptcha();
         ?>
-        <h2><?php echo esc_html__('hCaptcha', 'wp-captcha-shield'); ?></h2>
+        <h2><?php echo esc_html__('hCaptcha', 'captcha-security-shield'); ?></h2>
         <table class="form-table" role="presentation">
             <?php
             $this->fields->renderTextField(
                 'hcaptcha-site-key',
-                __('Site key', 'wp-captcha-shield'),
+                __('Site key', 'captcha-security-shield'),
                 'wp_captcha_shield[hcaptcha][site_key]',
                 $hCaptcha->siteKey(),
                 help: __(
                     'Public site key supplied by hCaptcha and used to display the CAPTCHA.',
-                    'wp-captcha-shield',
+                    'captcha-security-shield',
                 ),
             );
 
             $this->fields->renderSecretField(
                 'hcaptcha-secret-key',
-                __('Secret key', 'wp-captcha-shield'),
+                __('Secret key', 'captcha-security-shield'),
                 'wp_captcha_shield[hcaptcha][secret_key]',
                 $hCaptcha->secretKey() !== '',
                 __(
                     'Private server-side key used to verify submitted hCaptcha tokens.',
-                    'wp-captcha-shield',
+                    'captcha-security-shield',
                 ),
             );
 
             $this->fields->renderSelectField(
                 'hcaptcha-mode',
-                __('Display mode', 'wp-captcha-shield'),
+                __('Display mode', 'captcha-security-shield'),
                 'wp_captcha_shield[hcaptcha][mode]',
                 $hCaptcha->mode()->value,
                 [
-                    'checkbox' => __('Checkbox', 'wp-captcha-shield'),
-                    'invisible' => __('Invisible', 'wp-captcha-shield'),
+                    'checkbox' => __('Checkbox', 'captcha-security-shield'),
+                    'invisible' => __('Invisible', 'captcha-security-shield'),
                 ],
                 __(
                     'Controls how hCaptcha is presented to visitors. Checkbox is the default option.',
-                    'wp-captcha-shield',
+                    'captcha-security-shield',
                 ),
             );
             ?>

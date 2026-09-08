@@ -1,5 +1,5 @@
 {
-  "name": "wp-captcha-shield",
+  "name": "captcha-security-shield",
   "private": true,
   "scripts": {
     "minify:js": "terser"

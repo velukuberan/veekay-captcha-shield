@@ -159,14 +159,14 @@ final class LostPasswordFormIntegration
     private function visitorMessage(VerificationResult $result): string
     {
         if ($result->isUnavailable()) {
-            return __('CAPTCHA verification is temporarily unavailable. Please try again.', 'wp-captcha-shield');
+            return __('CAPTCHA verification is temporarily unavailable. Please try again.', 'captcha-security-shield');
         }
         if ($result->isMisconfigured()) {
             return __(
                 'CAPTCHA verification could not be completed. Please contact the site administrator.',
-                'wp-captcha-shield'
+                'captcha-security-shield'
             );
         }
-        return __('CAPTCHA verification failed. Please try again.', 'wp-captcha-shield');
+        return __('CAPTCHA verification failed. Please try again.', 'captcha-security-shield');
     }
 }

@@ -20,15 +20,15 @@ final class SupportedForms
     public function labels(): array
     {
         return [
-            self::WORDPRESS_LOGIN => __('WordPress login', 'wp-captcha-shield'),
-            self::WORDPRESS_REGISTRATION => __('WordPress registration', 'wp-captcha-shield'),
-            self::WORDPRESS_LOST_PASSWORD => __('WordPress lost password', 'wp-captcha-shield'),
-            self::WORDPRESS_COMMENTS => __('WordPress comments', 'wp-captcha-shield'),
-            self::WOOCOMMERCE_LOGIN => __('WooCommerce login', 'wp-captcha-shield'),
-            self::WOOCOMMERCE_REGISTRATION => __('WooCommerce registration', 'wp-captcha-shield'),
-            self::WOOCOMMERCE_LOST_PASSWORD => __('WooCommerce lost password', 'wp-captcha-shield'),
-            self::WOOCOMMERCE_PRODUCT_REVIEWS => __('WooCommerce product reviews', 'wp-captcha-shield'),
-            self::WOOCOMMERCE_CHECKOUT => __('WooCommerce checkout', 'wp-captcha-shield'),
+            self::WORDPRESS_LOGIN => __('WordPress login', 'captcha-security-shield'),
+            self::WORDPRESS_REGISTRATION => __('WordPress registration', 'captcha-security-shield'),
+            self::WORDPRESS_LOST_PASSWORD => __('WordPress lost password', 'captcha-security-shield'),
+            self::WORDPRESS_COMMENTS => __('WordPress comments', 'captcha-security-shield'),
+            self::WOOCOMMERCE_LOGIN => __('WooCommerce login', 'captcha-security-shield'),
+            self::WOOCOMMERCE_REGISTRATION => __('WooCommerce registration', 'captcha-security-shield'),
+            self::WOOCOMMERCE_LOST_PASSWORD => __('WooCommerce lost password', 'captcha-security-shield'),
+            self::WOOCOMMERCE_PRODUCT_REVIEWS => __('WooCommerce product reviews', 'captcha-security-shield'),
+            self::WOOCOMMERCE_CHECKOUT => __('WooCommerce checkout', 'captcha-security-shield'),
         ];
     }
 }

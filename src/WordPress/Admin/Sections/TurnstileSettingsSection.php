@@ -25,7 +25,7 @@ final class TurnstileSettingsSection implements SettingsTabSection
 
     public function label(): string
     {
-        return __('Cloudflare Turnstile', 'wp-captcha-shield');
+        return __('Cloudflare Turnstile', 'captcha-security-shield');
     }
 
     public function showsSubmitButton(): bool
@@ -37,12 +37,12 @@ final class TurnstileSettingsSection implements SettingsTabSection
     {
         $turnstile = $settings->turnstile();
         ?>
-        <h2><?php echo esc_html__('Cloudflare Turnstile', 'wp-captcha-shield'); ?></h2>
+        <h2><?php echo esc_html__('Cloudflare Turnstile', 'captcha-security-shield'); ?></h2>
 
         <p class="description">
             <?php echo esc_html__(
                 'The widget mode is configured in your Cloudflare Turnstile dashboard.',
-                'wp-captcha-shield',
+                'captcha-security-shield',
             ); ?>
         </p>
 
@@ -51,7 +51,7 @@ final class TurnstileSettingsSection implements SettingsTabSection
                 'Select the same mode here as the mode configured for this '
                 . 'site key. Changing this setting does not change the '
                 . 'widget mode in Cloudflare.',
-                'wp-captcha-shield',
+                'captcha-security-shield',
             ); ?>
         </p>
 
@@ -59,40 +59,40 @@ final class TurnstileSettingsSection implements SettingsTabSection
             <?php
             $this->fields->renderTextField(
                 'turnstile-site-key',
-                __('Site key', 'wp-captcha-shield'),
+                __('Site key', 'captcha-security-shield'),
                 'wp_captcha_shield[turnstile][site_key]',
                 $turnstile->siteKey(),
                 help: __(
                     'Public site key supplied by Cloudflare. It is used in the browser to render Turnstile.',
-                    'wp-captcha-shield',
+                    'captcha-security-shield',
                 ),
             );
 
             $this->fields->renderSecretField(
                 'turnstile-secret-key',
-                __('Secret key', 'wp-captcha-shield'),
+                __('Secret key', 'captcha-security-shield'),
                 'wp_captcha_shield[turnstile][secret_key]',
                 $turnstile->secretKey() !== '',
                 __(
                     'Private key supplied by Cloudflare and used only on the server to verify CAPTCHA tokens.',
-                    'wp-captcha-shield',
+                    'captcha-security-shield',
                 ),
             );
 
             $this->fields->renderSelectField(
                 'turnstile-mode',
-                __('Mode', 'wp-captcha-shield'),
+                __('Mode', 'captcha-security-shield'),
                 'wp_captcha_shield[turnstile][mode]',
                 $turnstile->mode()->value,
                 [
-                    'managed' => __('Managed', 'wp-captcha-shield'),
-                    'non_interactive' => __('Non-Interactive', 'wp-captcha-shield'),
-                    'invisible' => __('Invisible', 'wp-captcha-shield'),
+                    'managed' => __('Managed', 'captcha-security-shield'),
+                    'non_interactive' => __('Non-Interactive', 'captcha-security-shield'),
+                    'invisible' => __('Invisible', 'captcha-security-shield'),
                 ],
                 __(
                     'Must match the widget mode configured for this site key in '
                     . 'Cloudflare. Managed is recommended for most sites.',
-                    'wp-captcha-shield',
+                    'captcha-security-shield',
                 ),
             );
             ?>
@@ -112,7 +112,7 @@ final class TurnstileSettingsSection implements SettingsTabSection
                                             . 'reference the <a href="%s" target="_blank" '
                                             . 'rel="noopener noreferrer">Turnstile Privacy '
                                             . 'Addendum</a> in their privacy policy.',
-                                            'wp-captcha-shield',
+                                            'captcha-security-shield',
                                         ),
                                         [
                                             'a' => [

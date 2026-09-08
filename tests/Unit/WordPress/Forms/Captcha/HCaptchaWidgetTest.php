@@ -35,7 +35,7 @@ final class HCaptchaWidgetTest extends TestCase
         if (!defined('WP_CAPTCHA_SHIELD_URL')) {
             define(
                 'WP_CAPTCHA_SHIELD_URL',
-                'https://example.com/wp-content/plugins/wp-captcha-shield/',
+                'https://example.com/wp-content/plugins/captcha-security-shield/',
             );
         }
 

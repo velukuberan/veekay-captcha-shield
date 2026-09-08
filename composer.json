@@ -1,5 +1,5 @@
 {
-  "name": "velukuberan/wp-captcha-shield",
+  "name": "velukuberan/captcha-security-shield",
   "description": "Protects selected WordPress and WooCommerce forms using configurable CAPTCHA providers.",
   "type": "wordpress-plugin",
   "license": "GPL-3.0-or-later",
