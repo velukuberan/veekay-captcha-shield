@@ -2,7 +2,7 @@
 
 ## 1. Architectural stance
 
-WP Captcha Shield uses a simple layered architecture with SOLID principles, explicit boundaries, and a test-first development approach.
+Captcha Security Shield uses a simple layered architecture with SOLID principles, explicit boundaries, and a test-first development approach.
 
 The project is not a full Domain-Driven Design implementation. Domain concepts are used only where they provide clear separation between provider-independent rules, infrastructure, and WordPress/WooCommerce integration code.
 
@@ -286,7 +286,7 @@ Visitor-facing and admin-facing strings are plugin-owned translatable strings.
 The generated translation template lives at:
 
 ```text
-languages/wp-captcha-shield.pot
+languages/captcha-security-shield.pot
 ```
 
 Translation extraction is a build/documentation concern and must not introduce runtime dependencies into Domain or Provider code.

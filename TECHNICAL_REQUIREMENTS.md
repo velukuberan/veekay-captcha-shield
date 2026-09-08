@@ -165,12 +165,12 @@ Version 1 has no dedicated logging subsystem.
 
 ## 11. Internationalization
 
-* Use one consistent text domain: `wp-captcha-shield`.
+* Use one consistent text domain: `captcha-security-shield`.
 * Make all admin and visitor strings translatable.
 * Pass the text domain explicitly.
 * Escape translated output for its final context.
 * Map provider failures to plugin-owned translatable messages.
-* Maintain the generated translation template at `languages/wp-captcha-shield.pot`.
+* Maintain the generated translation template at `languages/captcha-security-shield.pot`.
 * Add translator comments where placeholders require context.
 * POT generation must exclude generated and development-only directories such as `build`, `vendor`, `tests`, and `coverage`.
 
@@ -308,7 +308,7 @@ At this milestone:
 * the admin settings UI includes provider tabs and environment status information;
 * plugin dependency composition is centralized in the `Plugin` composition root;
 * WordPress form registration and WooCommerce registration are coordinated by dedicated bootstraps;
-* translation extraction produces `languages/wp-captcha-shield.pot`;
+* translation extraction produces `languages/captcha-security-shield.pot`;
 * CI, coverage, documentation deployment, PR labelling, and release workflows exist;
 * production JavaScript minification is integrated into the release packaging workflow;
 * minimum supported PHP, WordPress, and WooCommerce versions have been manually compatibility-tested;

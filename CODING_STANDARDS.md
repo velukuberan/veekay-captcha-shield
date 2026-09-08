@@ -41,7 +41,7 @@
 - Sanitize input and escape output at the correct boundary.
 - Do not perform provider HTTP requests directly from hook callbacks.
 - Do not persist settings directly from rendering classes.
-- Load admin assets only on the WP Captcha Shield settings page.
+- Load admin assets only on the Captcha Security Shield settings page.
 - WooCommerce-specific initialization must remain inactive when WooCommerce is unavailable.
 
 ## 5. Admin UI organization
@@ -66,13 +66,13 @@
 
 ## 7. Internationalization and output safety
 
-- Always pass the `wp-captcha-shield` text domain explicitly.
+- Always pass the `captcha-security-shield` text domain explicitly.
 - Use the translation function appropriate to the context.
 - Translation does not replace escaping.
 - Escape HTML, attributes, URLs, and JavaScript values for their final context.
 - Never expose raw provider errors to visitors.
 - Add translator comments immediately before translatable strings when placeholders or ambiguous context require explanation.
-- Keep `languages/wp-captcha-shield.pot` generated from production source strings rather than editing extracted entries manually.
+- Keep `languages/captcha-security-shield.pot` generated from production source strings rather than editing extracted entries manually.
 - Exclude generated and development-only directories such as `build`, `vendor`, `tests`, and `coverage` from POT scanning.
 
 ## 8. Error handling

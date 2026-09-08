@@ -1,8 +1,8 @@
 <?php
 
 /**
- * Plugin Name:       WP Captcha Shield
- * Plugin URI:        https://github.com/velukuberan/wp-captcha-shield
+ * Plugin Name:       Captcha Security Shield
+ * Plugin URI:        https://github.com/velukuberan/captcha-security-shield
  * Description:       Protects selected WordPress and WooCommerce forms using configurable CAPTCHA providers.
  * Version:           1.0.0
  * Requires at least: 6.7.0
@@ -11,7 +11,7 @@
  * Author URI:        https://vkuberan.in
  * License:           GPL-3.0-or-later
  * License URI:       https://www.gnu.org/licenses/gpl-3.0.html
- * Text Domain:       wp-captcha-shield
+ * Text Domain:       captcha-security-shield
  *
  * @package WpCaptchaShield
  */
