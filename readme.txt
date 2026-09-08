@@ -207,11 +207,11 @@ https://velukuberan.github.io/captcha-security-shield/
 
 == External services ==
 
-Captcha Security Shield integrates with third-party CAPTCHA services. These services are contacted only when the corresponding CAPTCHA provider is configured and used for a protected form.
+Captcha Security Shield integrates with third-party CAPTCHA services. No CAPTCHA provider is contacted unless a site administrator configures that provider and selects it for a protected form.
 
-A provider's browser-side CAPTCHA service may process information directly from the visitor's browser according to that provider's own policies.
+When a configured provider is used, its browser-side CAPTCHA service may process information directly from the visitor's browser according to that provider's own policies.
 
-Captcha Security Shield also sends CAPTCHA verification information to the selected provider when a protected action is submitted.
+When a protected action is submitted, Captcha Security Shield sends CAPTCHA verification information to the selected provider for verification.
 
 === Cloudflare Turnstile ===
 
