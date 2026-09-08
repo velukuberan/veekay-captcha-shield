@@ -1,11 +1,11 @@
-site_name: WP Captcha Shield
-site_description: Configuration and usage documentation for WP Captcha Shield.
-site_url: https://velukuberan.github.io/wp-captcha-shield/
-repo_url: https://github.com/velukuberan/wp-captcha-shield
-repo_name: velukuberan/wp-captcha-shield
+site_name: Captcha Security Shield
+site_description: Configuration and usage documentation for Captcha Security Shield.
+site_url: https://velukuberan.github.io/captcha-security-shield/
+repo_url: https://github.com/velukuberan/captcha-security-shield
+repo_name: velukuberan/captcha-security-shield
 edit_uri: edit/main/docs/
 
-copyright: Copyright &copy; WP Captcha Shield contributors
+copyright: Copyright &copy; Captcha Security Shield contributors
 
 theme:
   name: null
