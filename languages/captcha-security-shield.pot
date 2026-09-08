@@ -9,7 +9,7 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2026-09-08T07:13:28+00:00\n"
+"POT-Creation-Date: 2026-09-08T09:13:20+00:00\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "X-Generator: WP-CLI 2.12.0\n"
 "X-Domain: captcha-security-shield\n"
@@ -119,7 +119,7 @@ msgstr ""
 
 #: src/WordPress/Admin/Sections/GoogleRecaptchaSettingsSection.php:63
 #: src/WordPress/Admin/Sections/HCaptchaSettingsSection.php:41
-#: src/WordPress/Admin/Sections/TurnstileSettingsSection.php:62
+#: src/WordPress/Admin/Sections/TurnstileSettingsSection.php:61
 msgid "Site key"
 msgstr ""
 
@@ -128,7 +128,7 @@ msgid "reCAPTCHA Enterprise site key used by protected forms in the browser."
 msgstr ""
 
 #: src/WordPress/Admin/Sections/GoogleRecaptchaSettingsSection.php:74
-#: src/WordPress/Admin/Sections/TurnstileSettingsSection.php:84
+#: src/WordPress/Admin/Sections/TurnstileSettingsSection.php:83
 msgid "Mode"
 msgstr ""
 
@@ -143,7 +143,7 @@ msgstr ""
 
 #: src/WordPress/Admin/Sections/GoogleRecaptchaSettingsSection.php:80
 #: src/WordPress/Admin/Sections/HCaptchaSettingsSection.php:68
-#: src/WordPress/Admin/Sections/TurnstileSettingsSection.php:90
+#: src/WordPress/Admin/Sections/TurnstileSettingsSection.php:89
 msgid "Invisible"
 msgstr ""
 
@@ -151,11 +151,11 @@ msgstr ""
 msgid "Determines how reCAPTCHA interacts with visitors. Score-based is recommended for most sites."
 msgstr ""
 
-#: src/WordPress/Admin/Sections/GoogleRecaptchaSettingsSection.php:90
+#: src/WordPress/Admin/Sections/GoogleRecaptchaSettingsSection.php:91
 msgid "Minimum score"
 msgstr ""
 
-#: src/WordPress/Admin/Sections/GoogleRecaptchaSettingsSection.php:97
+#: src/WordPress/Admin/Sections/GoogleRecaptchaSettingsSection.php:98
 msgid "Minimum acceptable score for score-based verification. Higher values are stricter. Use a value between 0 and 1."
 msgstr ""
 
@@ -164,7 +164,7 @@ msgid "Public site key supplied by hCaptcha and used to display the CAPTCHA."
 msgstr ""
 
 #: src/WordPress/Admin/Sections/HCaptchaSettingsSection.php:52
-#: src/WordPress/Admin/Sections/TurnstileSettingsSection.php:73
+#: src/WordPress/Admin/Sections/TurnstileSettingsSection.php:72
 msgid "Secret key"
 msgstr ""
 
@@ -250,28 +250,28 @@ msgstr ""
 msgid "Select the same mode here as the mode configured for this site key. Changing this setting does not change the widget mode in Cloudflare."
 msgstr ""
 
-#: src/WordPress/Admin/Sections/TurnstileSettingsSection.php:65
+#: src/WordPress/Admin/Sections/TurnstileSettingsSection.php:64
 msgid "Public site key supplied by Cloudflare. It is used in the browser to render Turnstile."
 msgstr ""
 
-#: src/WordPress/Admin/Sections/TurnstileSettingsSection.php:76
+#: src/WordPress/Admin/Sections/TurnstileSettingsSection.php:75
 msgid "Private key supplied by Cloudflare and used only on the server to verify CAPTCHA tokens."
 msgstr ""
 
-#: src/WordPress/Admin/Sections/TurnstileSettingsSection.php:88
+#: src/WordPress/Admin/Sections/TurnstileSettingsSection.php:87
 msgid "Managed"
 msgstr ""
 
-#: src/WordPress/Admin/Sections/TurnstileSettingsSection.php:89
+#: src/WordPress/Admin/Sections/TurnstileSettingsSection.php:88
 msgid "Non-Interactive"
 msgstr ""
 
-#: src/WordPress/Admin/Sections/TurnstileSettingsSection.php:92
+#: src/WordPress/Admin/Sections/TurnstileSettingsSection.php:91
 msgid "Must match the widget mode configured for this site key in Cloudflare. Managed is recommended for most sites."
 msgstr ""
 
 #. translators: %s: URL to the Cloudflare Turnstile Privacy Addendum.
-#: src/WordPress/Admin/Sections/TurnstileSettingsSection.php:110
+#: src/WordPress/Admin/Sections/TurnstileSettingsSection.php:109
 #, php-format
 msgid "Cloudflare requires websites using Invisible Turnstile to reference the <a href=\"%s\" target=\"_blank\" rel=\"noopener noreferrer\">Turnstile Privacy Addendum</a> in their privacy policy."
 msgstr ""
