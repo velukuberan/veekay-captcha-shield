@@ -1,6 +1,6 @@
 # Installation
 
-WP Captcha Shield can be installed from the WordPress admin area using the
+Captcha Security Shield can be installed from the WordPress admin area using the
 plugin ZIP package.
 
 ## Requirements
@@ -18,13 +18,13 @@ WooCommerce is not installed or active.
 
 1. In WordPress, go to **Plugins → Add New**.
 2. Select **Upload Plugin**.
-3. Choose the WP Captcha Shield ZIP package.
+3. Choose the Captcha Security Shield ZIP package.
 4. Select **Install Now**.
-5. Activate **WP Captcha Shield**.
+5. Activate **Captcha Security Shield**.
 
 After activation, go to:
 
-    Settings → WP Captcha Shield
+    Settings → Captcha Security Shield
 
 ## Configure CAPTCHA
 

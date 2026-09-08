@@ -1,15 +1,15 @@
 # Configure Cloudflare Turnstile
 
 This guide explains how to create a Cloudflare Turnstile widget and connect it
-to WP Captcha Shield.
+to Captcha Security Shield.
 
-WP Captcha Shield supports:
+Captcha Security Shield supports:
 
 - **Managed** — default and recommended
 - **Non-Interactive**
 - **Invisible**
 
-The mode selected in WP Captcha Shield must match the mode configured for the
+The mode selected in Captcha Security Shield must match the mode configured for the
 site key in Cloudflare. Changing the plugin setting does not change the widget
 mode in Cloudflare.
 
@@ -41,7 +41,7 @@ On the **Turnstile widgets** page, select **Add widget manually**.
 Enter a descriptive name, for example:
 
 ```text
-example.com - WP Captcha Shield
+example.com - Captcha Security Shield
 ```
 
 Use a separate name for a staging widget when appropriate.
@@ -109,12 +109,12 @@ Keep the secret key private. Do not put it in frontend JavaScript, public
 screenshots, public documentation, Git commits, support messages, or
 browser-visible HTML.
 
-## 5. Configure WP Captcha Shield
+## 5. Configure Captcha Security Shield
 
 In WordPress administration, open:
 
 ```text
-Settings → WP Captcha Shield
+Settings → Captcha Security Shield
 ```
 
 The example configuration is:
@@ -135,7 +135,7 @@ In the **Cloudflare Turnstile** section:
 3. select the same **Mode** configured for the site key in Cloudflare;
 4. save the settings.
 
-![Configure Cloudflare Turnstile in WP Captcha Shield](../images/cloudflare-turnstile/05-plugin-turnstile-settings.png)
+![Configure Cloudflare Turnstile in Captcha Security Shield](../images/cloudflare-turnstile/05-plugin-turnstile-settings.png)
 
 After the secret key is saved, the plugin does not display it again. Leave the
 secret-key field blank during later saves to keep the stored value unchanged.
@@ -143,13 +143,13 @@ The plugin warns when the Turnstile site key or secret key is missing.
 
 ## 6. Match the mode in both places
 
-| Cloudflare dashboard | WP Captcha Shield |
+| Cloudflare dashboard | Captcha Security Shield |
 |---|---|
 | Managed | Managed |
 | Non-Interactive | Non-Interactive |
 | Invisible | Invisible |
 
-Cloudflare controls the widget attached to the site key. WP Captcha Shield uses
+Cloudflare controls the widget attached to the site key. Captcha Security Shield uses
 its mode setting to choose the matching frontend integration. Changing one does
 not update the other.
 
@@ -198,7 +198,7 @@ Use a private or incognito browser session.
 6. Confirm that the protected action is rejected rather than bypassing
    verification.
 
-WP Captcha Shield performs server-side validation. This is required because a
+Captcha Security Shield performs server-side validation. This is required because a
 Turnstile token can be invalid, expired, forged, or already used. Tokens expire
 after five minutes and can be validated only once.
 
@@ -211,9 +211,9 @@ To modify a widget:
 3. open **Settings**;
 4. update the hostname or mode;
 5. save the widget;
-6. update WP Captcha Shield when the mode or credentials change.
+6. update Captcha Security Shield when the mode or credentials change.
 
-When rotating the secret key, update WP Captcha Shield with the new value.
+When rotating the secret key, update Captcha Security Shield with the new value.
 Cloudflare provides a temporary overlap period during rotation so the old and
 new secrets can remain valid while the integration is updated.
 
@@ -250,7 +250,7 @@ https://example.com/wp-login.php
 ### The visible behaviour does not match the selected mode
 
 Check the mode in both the Cloudflare dashboard and
-**Settings → WP Captcha Shield**. They must match.
+**Settings → Captcha Security Shield**. They must match.
 
 ### Invisible mode has no privacy disclosure
 

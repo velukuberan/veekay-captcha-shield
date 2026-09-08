@@ -1,6 +1,6 @@
 # Configure CAPTCHA for protected forms
 
-WP Captcha Shield uses the same provider-selection model for all supported forms.
+Captcha Security Shield uses the same provider-selection model for all supported forms.
 
 For each form, you can:
 
@@ -30,7 +30,7 @@ WooCommerce protection is available only when WooCommerce is active.
 
 ## Use the global default
 
-In **Settings → WP Captcha Shield**:
+In **Settings → Captcha Security Shield**:
 
 1. select the desired **Default provider**;
 2. set the form you want to protect to **Use default**;

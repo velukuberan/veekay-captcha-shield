@@ -1,5 +1,5 @@
 ---
-title: WP Captcha Shield documentation
+title: Captcha Security Shield documentation
 ---
 
 <section class="hero">

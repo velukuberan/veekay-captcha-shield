@@ -38,5 +38,5 @@ Confirm:
 - outbound HTTP requests are allowed;
 - the provider service is available.
 
-WP Captcha Shield maps expected outcomes to Successful, Failed, Unavailable, or
+Captcha Security Shield maps expected outcomes to Successful, Failed, Unavailable, or
 Misconfigured and does not expose raw provider responses to visitors.

@@ -1,6 +1,6 @@
 # Provider setup
 
-WP Captcha Shield currently implements three providers.
+Captcha Security Shield currently implements three providers.
 
 | Provider | Modes | Guide |
 |---|---|---|
