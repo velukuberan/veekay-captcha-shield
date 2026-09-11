@@ -26,7 +26,14 @@ final class SettingsPageView
     {
         ?>
         <div class="wrap wp-captcha-shield-settings">
-            <h1>
+            <h1 class="wp-captcha-shield-page-title">
+                <img
+                    class="wp-captcha-shield-page-logo"
+                    src="<?php echo esc_url(WP_CAPTCHA_SHIELD_URL . 'assets/images/icon-128x128.png'); ?>"
+                    alt=""
+                    width="32"
+                    height="32"
+                >
                 <?php echo esc_html__('Captcha Security Shield', 'captcha-security-shield'); ?>
             </h1>
 

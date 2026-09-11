@@ -1,3 +1,15 @@
+.wp-captcha-shield-page-title {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.wp-captcha-shield-page-logo {
+    width: 32px;
+    height: 32px;
+    object-fit: contain;
+}
+
 .wp-captcha-shield-tabs {
   margin-bottom: 20px;
 }
