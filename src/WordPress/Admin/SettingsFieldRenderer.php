@@ -76,7 +76,7 @@ final class SettingsFieldRenderer
                     <p class="description">
                         <?php echo esc_html__(
                             'A value is stored. Leave blank to keep it unchanged.',
-                            'captcha-security-shield',
+                            'veekay-captcha-shield',
                         ); ?>
                     </p>
                 <?php endif; ?>
@@ -137,7 +137,7 @@ final class SettingsFieldRenderer
 
         $helpLabel = sprintf(
             /* translators: %s: Settings field label. */
-            __('Help for %s', 'captcha-security-shield'),
+            __('Help for %s', 'veekay-captcha-shield'),
             $label,
         );
         ?>

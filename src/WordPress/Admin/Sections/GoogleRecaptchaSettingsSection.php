@@ -21,7 +21,7 @@ final class GoogleRecaptchaSettingsSection implements SettingsTabSection
 
     public function label(): string
     {
-        return __('Google reCAPTCHA', 'captcha-security-shield');
+        return __('Google reCAPTCHA', 'veekay-captcha-shield');
     }
 
     public function showsSubmitButton(): bool
@@ -33,62 +33,62 @@ final class GoogleRecaptchaSettingsSection implements SettingsTabSection
     {
         $google = $settings->googleRecaptcha();
         ?>
-        <h2><?php echo esc_html__('Google reCAPTCHA', 'captcha-security-shield'); ?></h2>
+        <h2><?php echo esc_html__('Google reCAPTCHA', 'veekay-captcha-shield'); ?></h2>
         <table class="form-table" role="presentation">
             <?php
             $this->fields->renderTextField(
                 'google-project-id',
-                __('Project ID', 'captcha-security-shield'),
+                __('Project ID', 'veekay-captcha-shield'),
                 'wp_captcha_shield[google_recaptcha][project_id]',
                 $google->projectId(),
                 help: __(
                     'Google Cloud project containing the reCAPTCHA Enterprise configuration.',
-                    'captcha-security-shield',
+                    'veekay-captcha-shield',
                 ),
             );
 
             $this->fields->renderSecretField(
                 'google-api-key',
-                __('API key', 'captcha-security-shield'),
+                __('API key', 'veekay-captcha-shield'),
                 'wp_captcha_shield[google_recaptcha][api_key]',
                 $google->apiKey() !== '',
                 __(
                     'Server-side Google Cloud API key used to create reCAPTCHA assessments.',
-                    'captcha-security-shield',
+                    'veekay-captcha-shield',
                 ),
             );
 
             $this->fields->renderTextField(
                 'google-site-key',
-                __('Site key', 'captcha-security-shield'),
+                __('Site key', 'veekay-captcha-shield'),
                 'wp_captcha_shield[google_recaptcha][site_key]',
                 $google->siteKey(),
                 help: __(
                     'reCAPTCHA Enterprise site key used by protected forms in the browser.',
-                    'captcha-security-shield',
+                    'veekay-captcha-shield',
                 ),
             );
 
             $this->fields->renderSelectField(
                 'google-mode',
-                __('Mode', 'captcha-security-shield'),
+                __('Mode', 'veekay-captcha-shield'),
                 'wp_captcha_shield[google_recaptcha][mode]',
                 $google->mode()->value,
                 [
-                    'score_based' => __('Score-based', 'captcha-security-shield'),
-                    'checkbox' => __('Checkbox', 'captcha-security-shield'),
-                    'invisible' => __('Invisible', 'captcha-security-shield'),
+                    'score_based' => __('Score-based', 'veekay-captcha-shield'),
+                    'checkbox' => __('Checkbox', 'veekay-captcha-shield'),
+                    'invisible' => __('Invisible', 'veekay-captcha-shield'),
                 ],
                 __(
                     // phpcs:ignore Generic.Files.LineLength.TooLong
                     'Determines how reCAPTCHA interacts with visitors. Score-based is recommended for most sites.',
-                    'captcha-security-shield',
+                    'veekay-captcha-shield',
                 ),
             );
 
             $this->fields->renderTextField(
                 'google-minimum-score',
-                __('Minimum score', 'captcha-security-shield'),
+                __('Minimum score', 'veekay-captcha-shield'),
                 'wp_captcha_shield[google_recaptcha][minimum_score]',
                 (string) $google->minimumScore(),
                 'number',
@@ -98,7 +98,7 @@ final class GoogleRecaptchaSettingsSection implements SettingsTabSection
                 __(
                     // phpcs:ignore Generic.Files.LineLength.TooLong
                     'Minimum acceptable score for score-based verification. Higher values are stricter. Use a value between 0 and 1.',
-                    'captcha-security-shield',
+                    'veekay-captcha-shield',
                 ),
             );
             ?>

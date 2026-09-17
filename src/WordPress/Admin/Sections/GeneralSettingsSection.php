@@ -27,7 +27,7 @@ final class GeneralSettingsSection implements SettingsTabSection
 
     public function label(): string
     {
-        return __('General', 'captcha-security-shield');
+        return __('General', 'veekay-captcha-shield');
     }
 
     public function showsSubmitButton(): bool
@@ -41,7 +41,7 @@ final class GeneralSettingsSection implements SettingsTabSection
             ?? 'disabled';
         ?>
         <h2>
-            <?php echo esc_html__('General settings', 'captcha-security-shield'); ?>
+            <?php echo esc_html__('General settings', 'veekay-captcha-shield'); ?>
         </h2>
         <table class="form-table" role="presentation">
             <tr>
@@ -49,7 +49,7 @@ final class GeneralSettingsSection implements SettingsTabSection
                     <?php
                     $this->fields->renderFieldLabel(
                         'wp-captcha-shield-global-provider',
-                        __('Default provider', 'captcha-security-shield'),
+                        __('Default provider', 'veekay-captcha-shield'),
                     );
                     ?>
                 </th>
@@ -63,11 +63,11 @@ final class GeneralSettingsSection implements SettingsTabSection
                     <?php
                     $this->fields->renderFieldHelp(
                         'wp-captcha-shield-global-provider',
-                        __('Default provider', 'captcha-security-shield'),
+                        __('Default provider', 'veekay-captcha-shield'),
                         __(
                             // phpcs:ignore Generic.Files.LineLength.TooLong
                             'Used by forms configured to “Use default”. Individual forms can override this setting.',
-                            'captcha-security-shield',
+                            'veekay-captcha-shield',
                         ),
                     );
                     ?>
@@ -78,12 +78,12 @@ final class GeneralSettingsSection implements SettingsTabSection
         <?php
         $this->renderFormSettingsGroup(
             $settings,
-            __('WordPress forms', 'captcha-security-shield'),
+            __('WordPress forms', 'veekay-captcha-shield'),
             false,
         );
         $this->renderFormSettingsGroup(
             $settings,
-            __('WooCommerce forms', 'captcha-security-shield'),
+            __('WooCommerce forms', 'veekay-captcha-shield'),
             true,
         );
     }
@@ -115,12 +115,12 @@ final class GeneralSettingsSection implements SettingsTabSection
                     ? __(
                         // phpcs:ignore Generic.Files.LineLength.TooLong
                         'Protects both Classic Checkout and Checkout Block. “Use default” inherits the Default provider setting.',
-                        'captcha-security-shield',
+                        'veekay-captcha-shield',
                     )
                     : __(
                         // phpcs:ignore Generic.Files.LineLength.TooLong
                         'Choose the CAPTCHA provider for this form. “Use default” inherits the Default provider setting.',
-                        'captcha-security-shield',
+                        'veekay-captcha-shield',
                     );
                 ?>
                 <tr>
@@ -141,7 +141,7 @@ final class GeneralSettingsSection implements SettingsTabSection
                                 value="default"
                                 <?php selected($formValue, 'default'); ?>
                             >
-                                <?php echo esc_html__('Use default', 'captcha-security-shield'); ?>
+                                <?php echo esc_html__('Use default', 'veekay-captcha-shield'); ?>
                             </option>
                             <?php $this->renderProviderOptions($formValue, true); ?>
                         </select>
@@ -166,15 +166,15 @@ final class GeneralSettingsSection implements SettingsTabSection
         if ($includeDisabled) {
             ?>
             <option value="disabled" <?php selected($selectedValue, 'disabled'); ?>>
-                <?php echo esc_html__('Disabled', 'captcha-security-shield'); ?>
+                <?php echo esc_html__('Disabled', 'veekay-captcha-shield'); ?>
             </option>
             <?php
         }
 
         $providers = [
-            CaptchaProvider::CloudflareTurnstile->value => __('Cloudflare Turnstile', 'captcha-security-shield'),
-            CaptchaProvider::GoogleRecaptcha->value => __('Google reCAPTCHA', 'captcha-security-shield'),
-            CaptchaProvider::HCaptcha->value => __('hCaptcha', 'captcha-security-shield'),
+            CaptchaProvider::CloudflareTurnstile->value => __('Cloudflare Turnstile', 'veekay-captcha-shield'),
+            CaptchaProvider::GoogleRecaptcha->value => __('Google reCAPTCHA', 'veekay-captcha-shield'),
+            CaptchaProvider::HCaptcha->value => __('hCaptcha', 'veekay-captcha-shield'),
         ];
 
         foreach ($providers as $value => $label) {

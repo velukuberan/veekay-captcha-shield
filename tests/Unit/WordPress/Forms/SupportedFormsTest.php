@@ -40,7 +40,7 @@ final class SupportedFormsTest extends TestCase
         foreach ($labels as $label) {
             Functions\expect('__')
                 ->once()
-                ->with($label, 'captcha-security-shield')
+                ->with($label, 'veekay-captcha-shield')
                 ->andReturn($label);
         }
 

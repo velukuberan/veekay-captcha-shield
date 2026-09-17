@@ -51,7 +51,7 @@ use WpCaptchaShield\WordPress\WooCommerce\WooCommerceAvailability;
 use WpCaptchaShield\WordPress\WooCommerce\WooCommerceBootstrap;
 
 /**
- * Composition root for Captcha Security Shield.
+ * Composition root for Veekay Captcha Shield.
  *
  * This is the single place where the domain, provider, and WordPress
  * layers are wired together into the full object graph, and where every

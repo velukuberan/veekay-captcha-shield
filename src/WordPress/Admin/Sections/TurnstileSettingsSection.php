@@ -25,7 +25,7 @@ final class TurnstileSettingsSection implements SettingsTabSection
 
     public function label(): string
     {
-        return __('Cloudflare Turnstile', 'captcha-security-shield');
+        return __('Cloudflare Turnstile', 'veekay-captcha-shield');
     }
 
     public function showsSubmitButton(): bool
@@ -37,12 +37,12 @@ final class TurnstileSettingsSection implements SettingsTabSection
     {
         $turnstile = $settings->turnstile();
         ?>
-        <h2><?php echo esc_html__('Cloudflare Turnstile', 'captcha-security-shield'); ?></h2>
+        <h2><?php echo esc_html__('Cloudflare Turnstile', 'veekay-captcha-shield'); ?></h2>
 
         <p class="description">
             <?php echo esc_html__(
                 'The widget mode is configured in your Cloudflare Turnstile dashboard.',
-                'captcha-security-shield',
+                'veekay-captcha-shield',
             ); ?>
         </p>
 
@@ -50,7 +50,7 @@ final class TurnstileSettingsSection implements SettingsTabSection
             <?php echo esc_html__(
                 // phpcs:ignore Generic.Files.LineLength.TooLong
                 'Select the same mode here as the mode configured for this site key. Changing this setting does not change the widget mode in Cloudflare.',
-                'captcha-security-shield',
+                'veekay-captcha-shield',
             ); ?>
         </p>
 
@@ -58,40 +58,40 @@ final class TurnstileSettingsSection implements SettingsTabSection
             <?php
             $this->fields->renderTextField(
                 'turnstile-site-key',
-                __('Site key', 'captcha-security-shield'),
+                __('Site key', 'veekay-captcha-shield'),
                 'wp_captcha_shield[turnstile][site_key]',
                 $turnstile->siteKey(),
                 help: __(
                     'Public site key supplied by Cloudflare. It is used in the browser to render Turnstile.',
-                    'captcha-security-shield',
+                    'veekay-captcha-shield',
                 ),
             );
 
             $this->fields->renderSecretField(
                 'turnstile-secret-key',
-                __('Secret key', 'captcha-security-shield'),
+                __('Secret key', 'veekay-captcha-shield'),
                 'wp_captcha_shield[turnstile][secret_key]',
                 $turnstile->secretKey() !== '',
                 __(
                     'Private key supplied by Cloudflare and used only on the server to verify CAPTCHA tokens.',
-                    'captcha-security-shield',
+                    'veekay-captcha-shield',
                 ),
             );
 
             $this->fields->renderSelectField(
                 'turnstile-mode',
-                __('Mode', 'captcha-security-shield'),
+                __('Mode', 'veekay-captcha-shield'),
                 'wp_captcha_shield[turnstile][mode]',
                 $turnstile->mode()->value,
                 [
-                    'managed' => __('Managed', 'captcha-security-shield'),
-                    'non_interactive' => __('Non-Interactive', 'captcha-security-shield'),
-                    'invisible' => __('Invisible', 'captcha-security-shield'),
+                    'managed' => __('Managed', 'veekay-captcha-shield'),
+                    'non_interactive' => __('Non-Interactive', 'veekay-captcha-shield'),
+                    'invisible' => __('Invisible', 'veekay-captcha-shield'),
                 ],
                 __(
                     // phpcs:ignore Generic.Files.LineLength.TooLong
                     'Must match the widget mode configured for this site key in Cloudflare. Managed is recommended for most sites.',
-                    'captcha-security-shield',
+                    'veekay-captcha-shield',
                 ),
             );
             ?>
@@ -109,7 +109,7 @@ final class TurnstileSettingsSection implements SettingsTabSection
                                         __(
                                             // phpcs:ignore Generic.Files.LineLength.TooLong
                                             'Cloudflare requires websites using Invisible Turnstile to reference the <a href="%s" target="_blank" rel="noopener noreferrer">Turnstile Privacy Addendum</a> in their privacy policy.',
-                                            'captcha-security-shield',
+                                            'veekay-captcha-shield',
                                         ),
                                         [
                                             'a' => [

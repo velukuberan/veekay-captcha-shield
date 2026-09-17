@@ -20,15 +20,15 @@ final class SupportedForms
     public function labels(): array
     {
         return [
-            self::WORDPRESS_LOGIN => __('WordPress login', 'captcha-security-shield'),
-            self::WORDPRESS_REGISTRATION => __('WordPress registration', 'captcha-security-shield'),
-            self::WORDPRESS_LOST_PASSWORD => __('WordPress lost password', 'captcha-security-shield'),
-            self::WORDPRESS_COMMENTS => __('WordPress comments', 'captcha-security-shield'),
-            self::WOOCOMMERCE_LOGIN => __('WooCommerce login', 'captcha-security-shield'),
-            self::WOOCOMMERCE_REGISTRATION => __('WooCommerce registration', 'captcha-security-shield'),
-            self::WOOCOMMERCE_LOST_PASSWORD => __('WooCommerce lost password', 'captcha-security-shield'),
-            self::WOOCOMMERCE_PRODUCT_REVIEWS => __('WooCommerce product reviews', 'captcha-security-shield'),
-            self::WOOCOMMERCE_CHECKOUT => __('WooCommerce checkout', 'captcha-security-shield'),
+            self::WORDPRESS_LOGIN => __('WordPress login', 'veekay-captcha-shield'),
+            self::WORDPRESS_REGISTRATION => __('WordPress registration', 'veekay-captcha-shield'),
+            self::WORDPRESS_LOST_PASSWORD => __('WordPress lost password', 'veekay-captcha-shield'),
+            self::WORDPRESS_COMMENTS => __('WordPress comments', 'veekay-captcha-shield'),
+            self::WOOCOMMERCE_LOGIN => __('WooCommerce login', 'veekay-captcha-shield'),
+            self::WOOCOMMERCE_REGISTRATION => __('WooCommerce registration', 'veekay-captcha-shield'),
+            self::WOOCOMMERCE_LOST_PASSWORD => __('WooCommerce lost password', 'veekay-captcha-shield'),
+            self::WOOCOMMERCE_PRODUCT_REVIEWS => __('WooCommerce product reviews', 'veekay-captcha-shield'),
+            self::WOOCOMMERCE_CHECKOUT => __('WooCommerce checkout', 'veekay-captcha-shield'),
         ];
     }
 }
