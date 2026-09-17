@@ -3,7 +3,7 @@
 declare(strict_types=1);
 
 /**
- * Uninstall handler for Captcha Security Shield.
+ * Uninstall handler for Veekay Captcha Shield.
  *
  * WordPress runs this file when the plugin is deleted from the Plugins
  * screen (not on deactivation), and only after confirming the delete
