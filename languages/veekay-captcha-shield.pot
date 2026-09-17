@@ -2,29 +2,29 @@
 # This file is distributed under the GPL-3.0-or-later.
 msgid ""
 msgstr ""
-"Project-Id-Version: Captcha Security Shield 1.0.0\n"
-"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/captcha-security-shield\n"
+"Project-Id-Version: Veekay Captcha Shield 1.0.0\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/veekay-captcha-shield\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2026-09-08T09:13:20+00:00\n"
+"POT-Creation-Date: 2026-09-17T16:52:44+00:00\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "X-Generator: WP-CLI 2.12.0\n"
-"X-Domain: captcha-security-shield\n"
+"X-Domain: veekay-captcha-shield\n"
 
 #. Plugin Name of the plugin
 #: wp-captcha-shield.php
 #: src/WordPress/Admin/SettingsPage.php:30
 #: src/WordPress/Admin/SettingsPage.php:31
-#: src/WordPress/Admin/SettingsPageView.php:30
-msgid "Captcha Security Shield"
+#: src/WordPress/Admin/SettingsPageView.php:37
+msgid "Veekay Captcha Shield"
 msgstr ""
 
 #. Plugin URI of the plugin
 #: wp-captcha-shield.php
-msgid "https://github.com/velukuberan/captcha-security-shield"
+msgid "https://github.com/velukuberan/veekay-captcha-shield"
 msgstr ""
 
 #. Description of the plugin
@@ -190,7 +190,7 @@ msgid "Status and compatibility"
 msgstr ""
 
 #: src/WordPress/Admin/Sections/StatusSection.php:45
-msgid "Compare the current environment with the minimum versions supported by Captcha Security Shield."
+msgid "Compare the current environment with the minimum versions supported by Veekay Captcha Shield."
 msgstr ""
 
 #: src/WordPress/Admin/Sections/StatusSection.php:53
@@ -290,23 +290,23 @@ msgstr ""
 msgid "You are not allowed to manage these settings."
 msgstr ""
 
-#: src/WordPress/Admin/SettingsPageView.php:49
+#: src/WordPress/Admin/SettingsPageView.php:56
 msgid "Settings saved."
 msgstr ""
 
-#: src/WordPress/Admin/SettingsPageView.php:93
-msgid "Captcha Security Shield settings"
+#: src/WordPress/Admin/SettingsPageView.php:100
+msgid "Veekay Captcha Shield settings"
 msgstr ""
 
-#: src/WordPress/Admin/SettingsPageView.php:122
+#: src/WordPress/Admin/SettingsPageView.php:129
 msgid "Cloudflare Turnstile configuration is incomplete."
 msgstr ""
 
-#: src/WordPress/Admin/SettingsPageView.php:130
+#: src/WordPress/Admin/SettingsPageView.php:137
 msgid "Google reCAPTCHA configuration is incomplete."
 msgstr ""
 
-#: src/WordPress/Admin/SettingsPageView.php:137
+#: src/WordPress/Admin/SettingsPageView.php:144
 msgid "hCaptcha configuration is incomplete."
 msgstr ""
 
