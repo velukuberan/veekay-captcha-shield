@@ -1,11 +1,11 @@
-site_name: Captcha Security Shield
-site_description: Configuration and usage documentation for Captcha Security Shield.
-site_url: https://velukuberan.github.io/captcha-security-shield/
-repo_url: https://github.com/velukuberan/captcha-security-shield
-repo_name: velukuberan/captcha-security-shield
+site_name: Veekay Captcha Shield
+site_description: Configuration and usage documentation for Veekay Captcha Shield.
+site_url: https://velukuberan.github.io/veekay-captcha-shield/
+repo_url: https://github.com/velukuberan/veekay-captcha-shield
+repo_name: velukuberan/veekay-captcha-shield
 edit_uri: edit/main/docs/
 
-copyright: Copyright &copy; Captcha Security Shield contributors
+copyright: Copyright &copy; Veekay Captcha Shield contributors
 
 theme:
   name: null

@@ -1,6 +1,6 @@
 # Installation
 
-Captcha Security Shield can be installed from the WordPress admin area using the
+Veekay Captcha Shield can be installed from the WordPress admin area using the
 plugin ZIP package.
 
 ## Requirements
@@ -18,13 +18,13 @@ WooCommerce is not installed or active.
 
 1. In WordPress, go to **Plugins → Add New**.
 2. Select **Upload Plugin**.
-3. Choose the Captcha Security Shield ZIP package.
+3. Choose the Veekay Captcha Shield ZIP package.
 4. Select **Install Now**.
-5. Activate **Captcha Security Shield**.
+5. Activate **Veekay Captcha Shield**.
 
 After activation, go to:
 
-    Settings → Captcha Security Shield
+    Settings → Veekay Captcha Shield
 
 ## Configure CAPTCHA
 

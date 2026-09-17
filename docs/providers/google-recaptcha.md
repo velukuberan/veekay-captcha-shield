@@ -1,14 +1,14 @@
 # Configure Google reCAPTCHA
 
-This guide explains how to create a Google reCAPTCHA key and connect it to Captcha Security Shield.
+This guide explains how to create a Google reCAPTCHA key and connect it to Veekay Captcha Shield.
 
-Captcha Security Shield supports:
+Veekay Captcha Shield supports:
 
 - **Score-based** — default and recommended
 - **Checkbox**
 - **Invisible**
 
-The mode selected in Captcha Security Shield must match the integration type configured for the reCAPTCHA site key. Changing the plugin setting does not change the key type in Google Cloud.
+The mode selected in Veekay Captcha Shield must match the integration type configured for the reCAPTCHA site key. Changing the plugin setting does not change the key type in Google Cloud.
 
 ## Before you begin
 
@@ -18,7 +18,7 @@ You need:
 - a Google Cloud project;
 - access to create reCAPTCHA keys and API credentials in that project;
 - a WordPress administrator account;
-- Captcha Security Shield installed;
+- Veekay Captcha Shield installed;
 - the hostname where reCAPTCHA will run.
 
 Google recommends using separate reCAPTCHA keys for development, staging, and production environments. This keeps test traffic separate from production risk data.
@@ -48,13 +48,13 @@ On the Fraud Defense dashboard, select **Set up reCAPTCHA protection**.
 Enter a descriptive display name, for example:
 
 ```text
-example.com - Captcha Security Shield
+example.com - Veekay Captcha Shield
 ```
 
 For a local score-based test key, a name such as this is also suitable:
 
 ```text
-Captcha Security Shield Score
+Veekay Captcha Shield Score
 ```
 
 ### Application type
@@ -65,7 +65,7 @@ Select:
 Web
 ```
 
-Captcha Security Shield integrates reCAPTCHA into browser-based WordPress forms.
+Veekay Captcha Shield integrates reCAPTCHA into browser-based WordPress forms.
 
 ### Domain list
 
@@ -128,12 +128,12 @@ Google displays both an **ID** and a **Secret key**.
 
 Use the credentials as follows:
 
-| Google value | Captcha Security Shield |
+| Google value | Veekay Captcha Shield |
 |---|---|
 | ID | Site key |
 | Secret key | Not used by the current plugin |
 
-The **ID** is the reCAPTCHA site key used by Captcha Security Shield.
+The **ID** is the reCAPTCHA site key used by Veekay Captcha Shield.
 
 > **Important:** Do not paste the reCAPTCHA **Secret key** into the plugin's **API key** field. The secret key and Google Cloud API key are different credentials.
 
@@ -141,7 +141,7 @@ The site key is browser-visible and is not treated as a secret. The reCAPTCHA se
 
 ## 5. Locate or create the Google Cloud API key
 
-Captcha Security Shield performs server-side assessments through the reCAPTCHA Enterprise API. Those requests use a Google Cloud **API key**.
+Veekay Captcha Shield performs server-side assessments through the reCAPTCHA Enterprise API. Those requests use a Google Cloud **API key**.
 
 Open:
 
@@ -178,7 +178,7 @@ Create credentials → API key
 Give it a descriptive name, for example:
 
 ```text
-Captcha Security Shield assessment API
+Veekay Captcha Shield assessment API
 ```
 
 ### Restrict the API key
@@ -191,11 +191,11 @@ reCAPTCHA Enterprise API
 
 When the WordPress server has a stable outbound IP address, you may also apply an IP-address application restriction.
 
-Do not use an HTTP-referrer restriction for this API key. Captcha Security Shield sends assessment requests from the WordPress server, not from the visitor's browser.
+Do not use an HTTP-referrer restriction for this API key. Veekay Captcha Shield sends assessment requests from the WordPress server, not from the visitor's browser.
 
 ## 6. Understand the three required values
 
-Captcha Security Shield requires three Google values:
+Veekay Captcha Shield requires three Google values:
 
 | Plugin field | Google source |
 |---|---|
@@ -210,15 +210,15 @@ This distinction is important:
 ```text
 Site key   = reCAPTCHA key ID
 API key    = Google Cloud API credential
-Secret key = not used by Captcha Security Shield
+Secret key = not used by Veekay Captcha Shield
 ```
 
-## 7. Configure Captcha Security Shield
+## 7. Configure Veekay Captcha Shield
 
 In WordPress administration, open:
 
 ```text
-Settings → Captcha Security Shield
+Settings → Veekay Captcha Shield
 ```
 
 Under **General settings**, select:
@@ -241,7 +241,7 @@ In the **Google reCAPTCHA** section:
 5. enter the **Minimum score**;
 6. save the settings.
 
-![Configure Google reCAPTCHA in Captcha Security Shield](../images/google-recaptcha/06b-plugin-google-recaptcha-settings.png)
+![Configure Google reCAPTCHA in Veekay Captcha Shield](../images/google-recaptcha/06b-plugin-google-recaptcha-settings.png)
 
 After the API key is saved, the plugin does not display it again. Leave the API-key field blank during later saves to keep the stored value unchanged.
 
@@ -249,17 +249,17 @@ The plugin warns when the Project ID, API key, or site key is missing.
 
 ## 8. Match the mode in both places
 
-| Google reCAPTCHA configuration | Captcha Security Shield |
+| Google reCAPTCHA configuration | Veekay Captcha Shield |
 |---|---|
 | Website key without challenges | Score-based |
 | Website key with a checkbox challenge | Checkbox |
 | Website key with an invisible challenge | Invisible |
 
-Google controls the behaviour attached to the site key. Captcha Security Shield uses its mode setting to load the matching frontend integration and evaluate the assessment correctly.
+Google controls the behaviour attached to the site key. Veekay Captcha Shield uses its mode setting to load the matching frontend integration and evaluate the assessment correctly.
 
-Changing the mode in Captcha Security Shield does not convert the key in Google Cloud.
+Changing the mode in Veekay Captcha Shield does not convert the key in Google Cloud.
 
-When moving to a different mode, create or edit a compatible reCAPTCHA key and update both the site key and mode in Captcha Security Shield.
+When moving to a different mode, create or edit a compatible reCAPTCHA key and update both the site key and mode in Veekay Captcha Shield.
 
 ### Using Checkbox mode
 
@@ -272,14 +272,14 @@ In Google Cloud:
 3. select the checkbox challenge option when available;
 4. save the key.
 
-In Captcha Security Shield:
+In Veekay Captcha Shield:
 
 1. enter the key ID as the **Site key**;
 2. select **Checkbox** as the mode;
 3. keep the Project ID and Google Cloud API key configured;
 4. save the settings.
 
-Captcha Security Shield renders Google's visible checkbox widget. Google may present an additional challenge when required.
+Veekay Captcha Shield renders Google's visible checkbox widget. Google may present an additional challenge when required.
 
 ### Using Invisible mode
 
@@ -292,16 +292,16 @@ In Google Cloud:
 3. select the invisible challenge option when available;
 4. save the key.
 
-In Captcha Security Shield:
+In Veekay Captcha Shield:
 
 1. enter the key ID as the **Site key**;
 2. select **Invisible** as the mode;
 3. keep the Project ID and Google Cloud API key configured;
 4. save the settings.
 
-Captcha Security Shield loads the Google script with explicit rendering, creates an invisible widget, and executes it automatically when the protected form is submitted. The visitor normally sees no checkbox, but Google may display a challenge when additional verification is required.
+Veekay Captcha Shield loads the Google script with explicit rendering, creates an invisible widget, and executes it automatically when the protected form is submitted. The visitor normally sees no checkbox, but Google may display a challenge when additional verification is required.
 
-> **Important:** Selecting **Invisible** only in Captcha Security Shield does not convert a score-based or checkbox key into an invisible key. The Google key configuration and plugin mode must match.
+> **Important:** Selecting **Invisible** only in Veekay Captcha Shield does not convert a score-based or checkbox key into an invisible key. The Google key configuration and plugin mode must match.
 
 ## 9. Configure the minimum score
 
@@ -313,7 +313,7 @@ Google score-based assessments return a score between:
 
 A score closer to `1.0` generally indicates that the interaction is more likely to be legitimate. A score closer to `0.0` indicates a higher likelihood of automated or abusive activity.
 
-Captcha Security Shield uses:
+Veekay Captcha Shield uses:
 
 ```text
 0.5
@@ -379,7 +379,7 @@ Use a private or incognito browser session.
 5. Test a low-score, invalid, expired, or failed verification condition.
 6. Confirm that the protected action is rejected rather than bypassing verification.
 
-Captcha Security Shield sends the token to the Google reCAPTCHA Enterprise assessment endpoint from the server.
+Veekay Captcha Shield sends the token to the Google reCAPTCHA Enterprise assessment endpoint from the server.
 
 The assessment request includes:
 
@@ -409,13 +409,13 @@ To modify a reCAPTCHA key:
 5. update its domain list or supported settings;
 6. save the key.
 
-Some key characteristics cannot be changed after creation. When changing to a different integration type, create a new key and update Captcha Security Shield with the new site key and matching mode.
+Some key characteristics cannot be changed after creation. When changing to a different integration type, create a new key and update Veekay Captcha Shield with the new site key and matching mode.
 
 When rotating the Google Cloud API key:
 
 1. create a replacement API key;
 2. restrict it to the reCAPTCHA Enterprise API;
-3. enter the new API key in Captcha Security Shield;
+3. enter the new API key in Veekay Captcha Shield;
 4. test the integration;
 5. disable or delete the old API key after confirming the replacement works.
 
@@ -477,7 +477,7 @@ Check that:
 
 ### The API reports that the project does not exist
 
-Captcha Security Shield requires the Google Cloud **Project ID**.
+Veekay Captcha Shield requires the Google Cloud **Project ID**.
 
 Do not enter only the project display name or numeric project number.
 
@@ -517,7 +517,7 @@ Reload or retry the form so the browser can generate a new token.
 
 ### The API key is visible in the WordPress settings page
 
-After the API key is saved, Captcha Security Shield should not display its stored value. Leave the field blank during later saves to preserve the current key.
+After the API key is saved, Veekay Captcha Shield should not display its stored value. Leave the field blank during later saves to preserve the current key.
 
 Enter a value only when initially configuring or replacing the API key.
 

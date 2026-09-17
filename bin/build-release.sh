@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
-SLUG=captcha-security-shield
+SLUG=veekay-captcha-shield
 VERSION="${1:-dev}"
 ROOT="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
 
@@ -13,22 +13,22 @@ mkdir -p "build/${SLUG}"
 
 echo "==> Installing production Composer dependencies"
 composer install \
-  --no-dev \
-  --optimize-autoloader \
-  --classmap-authoritative \
-  --no-interaction
+    --no-dev \
+    --optimize-autoloader \
+    --classmap-authoritative \
+    --no-interaction
 
 echo "==> Staging files with .distignore"
 rsync -av \
-  --exclude-from=.distignore \
-  --exclude='.git' \
-  --exclude='build' \
-  ./ "build/${SLUG}/"
+    --exclude-from=.distignore \
+    --exclude='.git' \
+    --exclude='build' \
+    ./ "build/${SLUG}/"
 
 echo "==> Creating zip"
 cd build
 ZIP_NAME="${SLUG}-${VERSION}.zip"
-zip -r "../${ZIP_NAME}" "${SLUG}" -x "*.DS_Store" > /dev/null
+zip -r "../${ZIP_NAME}" "${SLUG}" -x "*.DS_Store" >/dev/null
 cd ..
 
 echo ""
@@ -40,6 +40,7 @@ unzip -l "${ZIP_NAME}" | awk 'NR>3 {print $NF}' | awk -F/ '{print $1"/"$2}' | so
 
 echo ""
 echo "==> Restoring dev dependencies"
-composer install --no-interaction > /dev/null
+composer install --no-interaction >/dev/null
 
 echo "==> Reminder: install ${ZIP_NAME} in a clean WP to smoke-test"
+

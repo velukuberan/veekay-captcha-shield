@@ -1,6 +1,6 @@
 # Provider setup
 
-Captcha Security Shield currently implements three providers.
+Veekay Captcha Shield currently implements three providers.
 
 | Provider | Modes | Guide |
 |---|---|---|

@@ -1,14 +1,14 @@
 # Configure hCaptcha
 
 This guide explains how to create an hCaptcha site and connect it to
-Captcha Security Shield.
+Veekay Captcha Shield.
 
-Captcha Security Shield supports:
+Veekay Captcha Shield supports:
 
 - **Checkbox** — default
 - **Invisible**
 
-Captcha Security Shield controls how hCaptcha is presented on protected forms.
+Veekay Captcha Shield controls how hCaptcha is presented on protected forms.
 hCaptcha account and site-key settings continue to control provider-side
 behavior such as challenge behavior and difficulty.
 
@@ -18,7 +18,7 @@ You need:
 
 - an hCaptcha account;
 - a WordPress administrator account;
-- Captcha Security Shield installed and activated;
+- Veekay Captcha Shield installed and activated;
 - the hostname where hCaptcha will run.
 
 ## 1. Open the hCaptcha Sites dashboard
@@ -33,7 +33,7 @@ Select **Add Site** to create a new site configuration.
 
 Enter a descriptive name for the site.
 
-If you use domain allowlisting, add the hostname where Captcha Security Shield will
+If you use domain allowlisting, add the hostname where Veekay Captcha Shield will
 run.
 
 ![Create the hCaptcha site and configure the domain](../images/hcaptcha/02-create-site-1.png)
@@ -42,7 +42,7 @@ Configure the hCaptcha behavior and passing threshold appropriate for your
 site, then save the configuration.
 
 These are hCaptcha-side settings. They are separate from the **Checkbox** and
-**Invisible** display modes configured in Captcha Security Shield.
+**Invisible** display modes configured in Veekay Captcha Shield.
 
 ![Configure hCaptcha behavior and challenge threshold](../images/hcaptcha/02-create-site-2.png)
 
@@ -50,7 +50,7 @@ These are hCaptcha-side settings. They are separate from the **Checkbox** and
 
 Open the site you created.
 
-The **Sitekey** is the public identifier used by Captcha Security Shield to load
+The **Sitekey** is the public identifier used by Veekay Captcha Shield to load
 hCaptcha for protected forms.
 
 Copy the site key.
@@ -67,11 +67,11 @@ Keep this value private.
 
 ![Copy the hCaptcha secret key](../images/hcaptcha/04-copy-secret-key.png)
 
-## 5. Configure hCaptcha in Captcha Security Shield
+## 5. Configure hCaptcha in Veekay Captcha Shield
 
 In WordPress, go to:
 
-    Settings → Captcha Security Shield
+    Settings → Veekay Captcha Shield
 
 Open the **hCaptcha** tab.
 
@@ -88,7 +88,7 @@ Available modes are:
 
 Displays the hCaptcha checkbox interface.
 
-Checkbox is the default hCaptcha display mode in Captcha Security Shield.
+Checkbox is the default hCaptcha display mode in Veekay Captcha Shield.
 
 ### Invisible
 
@@ -99,7 +99,7 @@ needed.
 
 Select **Save Changes** after configuring the provider.
 
-![Configure hCaptcha in Captcha Security Shield](../images/hcaptcha/05-plugin-settings-1.png)
+![Configure hCaptcha in Veekay Captcha Shield](../images/hcaptcha/05-plugin-settings-1.png)
 
 ## 6. Enable hCaptcha for protected forms
 
@@ -146,7 +146,7 @@ If hCaptcha does not load or verification fails, confirm:
 - the site key is correct;
 - the secret key is correct;
 - the hostname is allowed by the hCaptcha site configuration;
-- the expected display mode is selected in Captcha Security Shield;
+- the expected display mode is selected in Veekay Captcha Shield;
 - outbound HTTP requests from WordPress are allowed;
 - browser or Content Security Policy restrictions are not blocking hCaptcha;
 - optimization or security plugins are not interfering with the provider

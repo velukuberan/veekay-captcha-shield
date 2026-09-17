@@ -1,6 +1,6 @@
 # Configure Google reCAPTCHA Invisible
 
-This guide explains how to create a Google reCAPTCHA Enterprise **Invisible** web key with the Google Cloud CLI and connect it to Captcha Security Shield.
+This guide explains how to create a Google reCAPTCHA Enterprise **Invisible** web key with the Google Cloud CLI and connect it to Veekay Captcha Shield.
 
 Invisible mode does not show the "I'm not a robot" checkbox. Google may still present a CAPTCHA challenge after risk analysis.
 
@@ -12,7 +12,7 @@ You need:
 - a Google Cloud project;
 - the Google Cloud CLI (`gcloud`) installed;
 - permission to create reCAPTCHA keys in the project;
-- Captcha Security Shield installed;
+- Veekay Captcha Shield installed;
 - the hostname where reCAPTCHA will run.
 
 Use separate keys for local development, staging, and production. Do not add local development hostnames to a production key.
@@ -25,7 +25,7 @@ Sign in to Google Cloud:
 gcloud auth login
 ```
 
-Select the same project that will be entered in Captcha Security Shield:
+Select the same project that will be entered in Veekay Captcha Shield:
 
 ```bash
 gcloud config set project PROJECT_ID
@@ -51,7 +51,7 @@ Create a key restricted to `localhost`:
 
 ```bash
 gcloud recaptcha keys create \
-  --display-name="Captcha Security Shield Invisible - Local" \
+  --display-name="Veekay Captcha Shield Invisible - Local" \
   --web \
   --integration-type=invisible \
   --domains=localhost
@@ -71,7 +71,7 @@ Create a separate production key with the permitted hostnames:
 
 ```bash
 gcloud recaptcha keys create \
-  --display-name="Captcha Security Shield Invisible - Production" \
+  --display-name="Veekay Captcha Shield Invisible - Production" \
   --web \
   --integration-type=invisible \
   --domains=example.com,www.example.com
@@ -102,7 +102,7 @@ All subdomains of an allowed domain are automatically allowed by Google. Add exp
 
 ## 4. Find the generated site key
 
-The create command returns the created reCAPTCHA key resource. The key ID is the **Site key** required by Captcha Security Shield.
+The create command returns the created reCAPTCHA key resource. The key ID is the **Site key** required by Veekay Captcha Shield.
 
 List keys in the active project:
 
@@ -127,7 +127,7 @@ Confirm that the output identifies an Invisible Web key and includes the expecte
 
 ## 5. Understand the required credentials
 
-Captcha Security Shield requires three Google values:
+Veekay Captcha Shield requires three Google values:
 
 | Plugin field | Google source |
 |---|---|
@@ -140,17 +140,17 @@ Google may also display a reCAPTCHA **Secret key**, but the current plugin does 
 ```text
 Site key   = reCAPTCHA key ID created by gcloud
 API key    = Google Cloud API credential
-Secret key = not used by Captcha Security Shield
+Secret key = not used by Veekay Captcha Shield
 ```
 
 Do not paste the reCAPTCHA Secret key into the plugin's API-key field.
 
-## 6. Configure Captcha Security Shield
+## 6. Configure Veekay Captcha Shield
 
 In WordPress administration, open:
 
 ```text
-Settings → Captcha Security Shield
+Settings → Veekay Captcha Shield
 ```
 
 Under **General settings**, select Google reCAPTCHA as the default provider or select Google reCAPTCHA directly for the protected form.
@@ -174,7 +174,7 @@ The Google key type and plugin mode must match:
 Mode: Invisible
 ```
 
-Selecting **Invisible** only in Captcha Security Shield does not convert a score-based or checkbox key into an Invisible key.
+Selecting **Invisible** only in Veekay Captcha Shield does not convert a score-based or checkbox key into an Invisible key.
 
 After the API key is saved, the plugin does not display it again. Leave the API-key field blank during later saves to preserve the stored value.
 
@@ -192,7 +192,7 @@ Use a private or incognito browser session.
 
 At runtime:
 
-1. Captcha Security Shield renders an Invisible Google widget.
+1. Veekay Captcha Shield renders an Invisible Google widget.
 2. The visitor submits the protected form.
 3. The plugin executes the widget.
 4. Google returns a token.
@@ -201,7 +201,7 @@ At runtime:
 7. The verifier creates a reCAPTCHA Enterprise assessment.
 8. The action continues only when verification succeeds.
 
-Tokens are untrusted, single-use, short-lived values and are not stored by Captcha Security Shield.
+Tokens are untrusted, single-use, short-lived values and are not stored by Veekay Captcha Shield.
 
 ## 8. Create deterministic testing keys
 
@@ -211,7 +211,7 @@ Testing keys are for development and staging only. Never use them in production.
 
 ```bash
 gcloud recaptcha keys create \
-  --display-name="Captcha Security Shield Invisible - No Challenge Test" \
+  --display-name="Veekay Captcha Shield Invisible - No Challenge Test" \
   --web \
   --integration-type=invisible \
   --domains=localhost \
@@ -225,7 +225,7 @@ This key always returns no CAPTCHA challenge and a score of `0.9`.
 
 ```bash
 gcloud recaptcha keys create \
-  --display-name="Captcha Security Shield Invisible - Challenge Test" \
+  --display-name="Veekay Captcha Shield Invisible - Challenge Test" \
   --web \
   --integration-type=invisible \
   --domains=localhost \
@@ -246,7 +246,7 @@ gcloud recaptcha keys update SITE_KEY \
 
 This replaces the key's allowed-domain configuration with the supplied list.
 
-The update command does not provide an option to change the integration type. To move between Score-based, Checkbox, and Invisible modes, create a new key and update the Site key and Mode in Captcha Security Shield.
+The update command does not provide an option to change the integration type. To move between Score-based, Checkbox, and Invisible modes, create a new key and update the Site key and Mode in Veekay Captcha Shield.
 
 ## 10. Delete temporary keys
 
@@ -284,7 +284,7 @@ Change it when necessary:
 gcloud config set project PROJECT_ID
 ```
 
-The active project must match the Project ID configured in Captcha Security Shield.
+The active project must match the Project ID configured in Veekay Captcha Shield.
 
 ### The reCAPTCHA API is unavailable
 
@@ -321,7 +321,7 @@ If it is not an Invisible integration, create a new key using:
 --integration-type=invisible
 ```
 
-Then replace the Site key in Captcha Security Shield and keep **Mode: Invisible** selected.
+Then replace the Site key in Veekay Captcha Shield and keep **Mode: Invisible** selected.
 
 ### The widget or badge does not load
 
@@ -336,7 +336,7 @@ Check that:
 
 ### Form submission does not resume
 
-Check the browser console for script errors and confirm that the Google script loaded successfully. Retry with extensions disabled and confirm that the protected form contains the Invisible widget and token field rendered by Captcha Security Shield.
+Check the browser console for script errors and confirm that the Google script loaded successfully. Retry with extensions disabled and confirm that the protected form contains the Invisible widget and token field rendered by Veekay Captcha Shield.
 
 ### Login fails after waiting on the page
 
