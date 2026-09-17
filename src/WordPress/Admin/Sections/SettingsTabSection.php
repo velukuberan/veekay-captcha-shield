@@ -7,7 +7,7 @@ namespace WpCaptchaShield\WordPress\Admin\Sections;
 use WpCaptchaShield\WordPress\Settings\PluginSettings;
 
 /**
- * One tab on the Captcha Security Shield settings page.
+ * One tab on the Veekay Captcha Shield settings page.
  */
 interface SettingsTabSection
 {

@@ -116,7 +116,7 @@ final class CommentFormIntegration
             esc_html($this->visitorMessage($result)),
             esc_html__(
                 'Comment submission blocked',
-                'captcha-security-shield',
+                'veekay-captcha-shield',
             ),
             [
                 'response' => 403,
@@ -214,20 +214,20 @@ final class CommentFormIntegration
         if ($result->isUnavailable()) {
             return __(
                 'CAPTCHA verification is temporarily unavailable. Please try again.',
-                'captcha-security-shield',
+                'veekay-captcha-shield',
             );
         }
 
         if ($result->isMisconfigured()) {
             return __(
                 'CAPTCHA verification could not be completed. Please contact the site administrator.',
-                'captcha-security-shield',
+                'veekay-captcha-shield',
             );
         }
 
         return __(
             'CAPTCHA verification failed. Please try again.',
-            'captcha-security-shield',
+            'veekay-captcha-shield',
         );
     }
 }

@@ -34,7 +34,7 @@ final class SettingsPageView
                     width="32"
                     height="32"
                 >
-                <?php echo esc_html__('Captcha Security Shield', 'captcha-security-shield'); ?>
+                <?php echo esc_html__('Veekay Captcha Shield', 'veekay-captcha-shield'); ?>
             </h1>
 
             <?php
@@ -55,7 +55,7 @@ final class SettingsPageView
                     <p>
                         <?php echo esc_html__(
                             'Settings saved.',
-                            'captcha-security-shield',
+                            'veekay-captcha-shield',
                         ); ?>
                     </p>
                 </div>
@@ -97,7 +97,7 @@ final class SettingsPageView
         <nav
             class="nav-tab-wrapper wp-captcha-shield-tabs"
             role="tablist"
-            aria-label="<?php echo esc_attr__('Captcha Security Shield settings', 'captcha-security-shield'); ?>"
+            aria-label="<?php echo esc_attr__('Veekay Captcha Shield settings', 'veekay-captcha-shield'); ?>"
         >
             <?php foreach ($this->sections as $index => $section): ?>
                 <?php $isActive = $index === 0; ?>
@@ -126,7 +126,7 @@ final class SettingsPageView
             $settings->turnstile()->siteKey() === ''
             || $settings->turnstile()->secretKey() === ''
         ) {
-            $warnings[] = __('Cloudflare Turnstile configuration is incomplete.', 'captcha-security-shield');
+            $warnings[] = __('Cloudflare Turnstile configuration is incomplete.', 'veekay-captcha-shield');
         }
 
         if (
@@ -134,14 +134,14 @@ final class SettingsPageView
             || $settings->googleRecaptcha()->apiKey() === ''
             || $settings->googleRecaptcha()->siteKey() === ''
         ) {
-            $warnings[] = __('Google reCAPTCHA configuration is incomplete.', 'captcha-security-shield');
+            $warnings[] = __('Google reCAPTCHA configuration is incomplete.', 'veekay-captcha-shield');
         }
 
         if (
             $settings->hCaptcha()->siteKey() === ''
             || $settings->hCaptcha()->secretKey() === ''
         ) {
-            $warnings[] = __('hCaptcha configuration is incomplete.', 'captcha-security-shield');
+            $warnings[] = __('hCaptcha configuration is incomplete.', 'veekay-captcha-shield');
         }
 
         foreach ($warnings as $warning) {

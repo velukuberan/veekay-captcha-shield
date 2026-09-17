@@ -25,7 +25,7 @@ final class StatusSection implements SettingsTabSection
 
     public function label(): string
     {
-        return __('Status', 'captcha-security-shield');
+        return __('Status', 'veekay-captcha-shield');
     }
 
     public function showsSubmitButton(): bool
@@ -40,32 +40,32 @@ final class StatusSection implements SettingsTabSection
         $wordpressVersion = get_bloginfo('version');
         $wooCommerceVersion = defined('WC_VERSION') ? WC_VERSION : null;
         ?>
-        <h2><?php echo esc_html__('Status and compatibility', 'captcha-security-shield'); ?></h2>
+        <h2><?php echo esc_html__('Status and compatibility', 'veekay-captcha-shield'); ?></h2>
         <p class="description">
             <?php echo esc_html__(
-                'Compare the current environment with the minimum versions supported by Captcha Security Shield.',
-                'captcha-security-shield',
+                'Compare the current environment with the minimum versions supported by Veekay Captcha Shield.',
+                'veekay-captcha-shield',
             ); ?>
         </p>
         <table class="widefat striped wp-captcha-shield-status-table">
             <thead>
                 <tr>
-                    <th scope="col"><?php echo esc_html__('Component', 'captcha-security-shield'); ?></th>
-                    <th scope="col"><?php echo esc_html__('Minimum supported', 'captcha-security-shield'); ?></th>
-                    <th scope="col"><?php echo esc_html__('Current', 'captcha-security-shield'); ?></th>
-                    <th scope="col"><?php echo esc_html__('Status', 'captcha-security-shield'); ?></th>
+                    <th scope="col"><?php echo esc_html__('Component', 'veekay-captcha-shield'); ?></th>
+                    <th scope="col"><?php echo esc_html__('Minimum supported', 'veekay-captcha-shield'); ?></th>
+                    <th scope="col"><?php echo esc_html__('Current', 'veekay-captcha-shield'); ?></th>
+                    <th scope="col"><?php echo esc_html__('Status', 'veekay-captcha-shield'); ?></th>
                 </tr>
             </thead>
             <tbody>
                 <?php
                 $this->renderStatusRow(
-                    __('PHP', 'captcha-security-shield'),
+                    __('PHP', 'veekay-captcha-shield'),
                     self::MINIMUM_PHP_VERSION,
                     PHP_VERSION,
                     $this->compatibility->isAtLeast(PHP_VERSION, self::MINIMUM_PHP_VERSION),
                 );
                 $this->renderStatusRow(
-                    __('WordPress', 'captcha-security-shield'),
+                    __('WordPress', 'veekay-captcha-shield'),
                     self::MINIMUM_WORDPRESS_VERSION,
                     $wordpressVersion,
                     $this->compatibility->isAtLeast($wordpressVersion, self::MINIMUM_WORDPRESS_VERSION),
@@ -73,14 +73,14 @@ final class StatusSection implements SettingsTabSection
 
                 if ($wooCommerceVersion === null) {
                     $this->renderStatusRow(
-                        __('WooCommerce', 'captcha-security-shield'),
+                        __('WooCommerce', 'veekay-captcha-shield'),
                         self::MINIMUM_WOOCOMMERCE_VERSION,
-                        __('Not active', 'captcha-security-shield'),
+                        __('Not active', 'veekay-captcha-shield'),
                         null,
                     );
                 } else {
                     $this->renderStatusRow(
-                        __('WooCommerce', 'captcha-security-shield'),
+                        __('WooCommerce', 'veekay-captcha-shield'),
                         self::MINIMUM_WOOCOMMERCE_VERSION,
                         $wooCommerceVersion,
                         $this->compatibility->isAtLeast($wooCommerceVersion, self::MINIMUM_WOOCOMMERCE_VERSION),
@@ -92,14 +92,14 @@ final class StatusSection implements SettingsTabSection
         <p class="description">
             <?php echo esc_html__(
                 'WooCommerce is optional. WordPress form protection remains available when WooCommerce is not active.',
-                'captcha-security-shield',
+                'veekay-captcha-shield',
             ); ?>
         </p>
 
         <p class="description">
             <?php echo esc_html__(
                 'WooCommerce versions below 10.1.0 are outside the supported compatibility range.',
-                'captcha-security-shield',
+                'veekay-captcha-shield',
             ); ?>
         </p>
         <?php
@@ -111,14 +111,14 @@ final class StatusSection implements SettingsTabSection
         string $currentVersion,
         ?bool $compatible,
     ): void {
-        $status = __('Optional', 'captcha-security-shield');
+        $status = __('Optional', 'veekay-captcha-shield');
         $statusClass = 'is-optional';
 
         if ($compatible === true) {
-            $status = __('Compatible', 'captcha-security-shield');
+            $status = __('Compatible', 'veekay-captcha-shield');
             $statusClass = 'is-compatible';
         } elseif ($compatible === false) {
-            $status = __('Unsupported', 'captcha-security-shield');
+            $status = __('Unsupported', 'veekay-captcha-shield');
             $statusClass = 'is-unsupported';
         }
         ?>

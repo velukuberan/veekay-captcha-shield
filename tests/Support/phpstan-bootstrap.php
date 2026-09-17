@@ -23,6 +23,6 @@ if (!defined('WP_CAPTCHA_SHIELD_PATH')) {
 if (!defined('WP_CAPTCHA_SHIELD_URL')) {
     define(
         'WP_CAPTCHA_SHIELD_URL',
-        'https://example.test/wp-content/plugins/captcha-security-shield/',
+        'https://example.test/wp-content/plugins/veekay-captcha-shield/',
     );
 }
