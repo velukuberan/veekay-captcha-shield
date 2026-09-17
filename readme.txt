@@ -1,7 +1,7 @@
-=== Captcha Security Shield ===
+=== Veekay Captcha Shield ===
 Contributors: vkuberan
 Tags: captcha, woocommerce, recaptcha, hcaptcha, turnstile
-Requires at least: 6.7.0
+Requires at least: 6.7
 Tested up to: 7.1
 Requires PHP: 8.1
 Stable tag: 1.0.0
@@ -12,7 +12,7 @@ Protect selected WordPress and WooCommerce forms with Cloudflare Turnstile, Goog
 
 == Description ==
 
-Captcha Security Shield protects selected WordPress and WooCommerce forms using configurable CAPTCHA providers.
+Veekay Captcha Shield protects selected WordPress and WooCommerce forms using configurable CAPTCHA providers.
 
 Choose a global default provider, then optionally use a different provider for individual forms or disable CAPTCHA for specific forms.
 
@@ -44,7 +44,7 @@ WooCommerce 10.1.0 or newer is required when WooCommerce protection is used.
 
 **Configuration**
 
-Captcha Security Shield provides one settings page under **Settings → Captcha Security Shield**.
+Veekay Captcha Shield provides one settings page under **Settings → Veekay Captcha Shield**.
 
 The General tab lets you:
 
@@ -55,7 +55,7 @@ The General tab lets you:
 
 Separate settings tabs are available for Cloudflare Turnstile, Google reCAPTCHA Enterprise, and hCaptcha.
 
-The Status tab compares the current PHP, WordPress, and WooCommerce versions with the minimum versions supported by Captcha Security Shield.
+The Status tab compares the current PHP, WordPress, and WooCommerce versions with the minimum versions supported by Veekay Captcha Shield.
 
 **Security and verification**
 
@@ -70,17 +70,17 @@ The Status tab compares the current PHP, WordPress, and WooCommerce versions wit
 
 Detailed setup, provider configuration, form guides, and troubleshooting documentation:
 
-https://velukuberan.github.io/captcha-security-shield/
+https://velukuberan.github.io/veekay-captcha-shield/
 
 Project source and technical documentation:
 
-https://github.com/velukuberan/captcha-security-shield
+https://github.com/velukuberan/veekay-captcha-shield
 
 == Installation ==
 
-1. Install **Captcha Security Shield** from **Plugins → Add New**, or upload the plugin ZIP package using **Plugins → Add New → Upload Plugin**.
-2. Activate **Captcha Security Shield**.
-3. Go to **Settings → Captcha Security Shield**.
+1. Install **Veekay Captcha Shield** from **Plugins → Add New**, or upload the plugin ZIP package using **Plugins → Add New → Upload Plugin**.
+2. Activate **Veekay Captcha Shield**.
+3. Go to **Settings → Veekay Captcha Shield**.
 4. Configure the credentials for at least one CAPTCHA provider.
 5. On the General tab, select the provider you want to use as the global default.
 6. Optionally override or disable CAPTCHA for individual WordPress or WooCommerce forms.
@@ -99,13 +99,13 @@ https://www.hcaptcha.com/
 
 Detailed setup guides are available at:
 
-https://velukuberan.github.io/captcha-security-shield/
+https://velukuberan.github.io/veekay-captcha-shield/
 
 == Frequently Asked Questions ==
 
 = Which CAPTCHA providers are supported? =
 
-Captcha Security Shield supports Cloudflare Turnstile, Google reCAPTCHA Enterprise, and hCaptcha.
+Veekay Captcha Shield supports Cloudflare Turnstile, Google reCAPTCHA Enterprise, and hCaptcha.
 
 Cloudflare Turnstile supports Managed, Non-Interactive, and Invisible modes.
 
@@ -117,7 +117,7 @@ hCaptcha supports Checkbox and Invisible display modes.
 
 The best provider depends on your requirements.
 
-Cloudflare Turnstile supports Managed, Non-Interactive, and Invisible modes, with Managed as the default mode in Captcha Security Shield.
+Cloudflare Turnstile supports Managed, Non-Interactive, and Invisible modes, with Managed as the default mode in Veekay Captcha Shield.
 
 Google reCAPTCHA Enterprise supports Score-based, Checkbox, and Invisible modes using Google Cloud reCAPTCHA assessments.
 
@@ -147,13 +147,13 @@ WooCommerce 10.1.0 or newer is required for WooCommerce protection.
 
 Yes.
 
-Captcha Security Shield integrates with the traditional WooCommerce Classic Checkout flow and preserves CAPTCHA protection when WooCommerce updates checkout content through AJAX.
+Veekay Captcha Shield integrates with the traditional WooCommerce Classic Checkout flow and preserves CAPTCHA protection when WooCommerce updates checkout content through AJAX.
 
 = Does this plugin support WooCommerce Checkout Block? =
 
 Yes.
 
-Captcha Security Shield supports WooCommerce Checkout Block using the Store API checkout flow. CAPTCHA token data is passed through WooCommerce checkout extension data and verified server-side before checkout completes.
+Veekay Captcha Shield supports WooCommerce Checkout Block using the Store API checkout flow. CAPTCHA token data is passed through WooCommerce checkout extension data and verified server-side before checkout completes.
 
 Classic Checkout and Checkout Block use the same WooCommerce checkout CAPTCHA setting.
 
@@ -167,7 +167,7 @@ WooCommerce product reviews are independently configurable from WordPress commen
 
 No.
 
-CAPTCHA tokens are used for provider verification and are not persisted by Captcha Security Shield.
+CAPTCHA tokens are used for provider verification and are not persisted by Veekay Captcha Shield.
 
 = What happens if the CAPTCHA provider cannot be reached? =
 
@@ -179,17 +179,17 @@ Visitors receive a plugin-owned message asking them to try again. Raw provider e
 
 No.
 
-Deactivating Captcha Security Shield preserves its settings, credentials, global default, per-form overrides, and provider configuration.
+Deactivating Veekay Captcha Shield preserves its settings, credentials, global default, per-form overrides, and provider configuration.
 
 = Does uninstalling the plugin remove my settings? =
 
 Yes.
 
-Uninstalling Captcha Security Shield permanently removes plugin-owned data, including credentials, global defaults, per-form settings, provider settings, transients, and caches.
+Uninstalling Veekay Captcha Shield permanently removes plugin-owned data, including credentials, global defaults, per-form settings, provider settings, transients, and caches.
 
 Uninstallation does not contact external CAPTCHA providers or revoke credentials stored with those providers.
 
-= Does Captcha Security Shield use external services? =
+= Does Veekay Captcha Shield use external services? =
 
 Yes.
 
@@ -203,23 +203,23 @@ See the **External services** section below for details.
 
 User documentation is available at:
 
-https://velukuberan.github.io/captcha-security-shield/
+https://velukuberan.github.io/veekay-captcha-shield/
 
 == External services ==
 
-Captcha Security Shield integrates with third-party CAPTCHA services. No CAPTCHA provider is contacted unless a site administrator configures that provider and selects it for a protected form.
+Veekay Captcha Shield integrates with third-party CAPTCHA services. No CAPTCHA provider is contacted unless a site administrator configures that provider and selects it for a protected form.
 
 When a configured provider is used, its browser-side CAPTCHA service may process information directly from the visitor's browser according to that provider's own policies.
 
-When a protected action is submitted, Captcha Security Shield sends CAPTCHA verification information to the selected provider for verification.
+When a protected action is submitted, Veekay Captcha Shield sends CAPTCHA verification information to the selected provider for verification.
 
 === Cloudflare Turnstile ===
 
 When Cloudflare Turnstile protects a form, the Turnstile browser service is loaded so Cloudflare can perform its CAPTCHA challenge and generate a verification token.
 
-When the protected form is submitted, Captcha Security Shield sends the generated token and the configured secret key to Cloudflare's Siteverify service. The visitor's IP address may also be included when available.
+When the protected form is submitted, Veekay Captcha Shield sends the generated token and the configured secret key to Cloudflare's Siteverify service. The visitor's IP address may also be included when available.
 
-No form-field contents are intentionally included by Captcha Security Shield in the server-side Siteverify request.
+No form-field contents are intentionally included by Veekay Captcha Shield in the server-side Siteverify request.
 
 Service:
 https://www.cloudflare.com/products/turnstile/
@@ -237,7 +237,7 @@ https://www.cloudflare.com/website-terms/
 
 When Google reCAPTCHA protects a form, Google's reCAPTCHA browser service is used to generate a CAPTCHA token.
 
-When the protected form is submitted, Captcha Security Shield creates a Google reCAPTCHA Enterprise assessment.
+When the protected form is submitted, Veekay Captcha Shield creates a Google reCAPTCHA Enterprise assessment.
 
 The assessment can include:
 
@@ -265,9 +265,9 @@ https://cloud.google.com/privacy
 
 When hCaptcha protects a form, the hCaptcha browser service is loaded so hCaptcha can perform its challenge and generate a verification token.
 
-When the protected form is submitted, Captcha Security Shield sends the generated token, configured site key, and configured secret key to hCaptcha's Siteverify service. The visitor's IP address may also be included when available.
+When the protected form is submitted, Veekay Captcha Shield sends the generated token, configured site key, and configured secret key to hCaptcha's Siteverify service. The visitor's IP address may also be included when available.
 
-No form-field contents are intentionally included by Captcha Security Shield in the server-side Siteverify request.
+No form-field contents are intentionally included by Veekay Captcha Shield in the server-side Siteverify request.
 
 Service:
 https://www.hcaptcha.com/
@@ -297,11 +297,11 @@ Site owners are responsible for reviewing the terms, privacy requirements, and c
 
 Please report bugs and technical issues at:
 
-https://github.com/velukuberan/captcha-security-shield/issues
+https://github.com/velukuberan/veekay-captcha-shield/issues
 
 User documentation and troubleshooting guides are available at:
 
-https://velukuberan.github.io/captcha-security-shield/
+https://velukuberan.github.io/veekay-captcha-shield/
 
 == Changelog ==
 

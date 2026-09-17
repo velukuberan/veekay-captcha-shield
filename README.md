@@ -1,6 +1,6 @@
-# Captcha Security Shield
+# Veekay Captcha Shield
 
-Captcha Security Shield is a WordPress plugin for protecting selected WordPress and WooCommerce forms with configurable CAPTCHA providers.
+Veekay Captcha Shield is a WordPress plugin for protecting selected WordPress and WooCommerce forms with configurable CAPTCHA providers.
 
 The plugin uses a provider-neutral configuration model:
 
@@ -22,7 +22,7 @@ Implemented modes:
 * Non-Interactive
 * Invisible
 
-Setup guide: [Configure Cloudflare Turnstile](https://velukuberan.github.io/captcha-security-shield/providers/cloudflare-turnstile/)
+Setup guide: [Configure Cloudflare Turnstile](https://velukuberan.github.io/veekay-captcha-shield/providers/cloudflare-turnstile/)
 
 ### Google reCAPTCHA
 
@@ -114,7 +114,7 @@ Provider selection and provider-specific mode configuration remain separate.
 
 ## Admin settings
 
-Captcha Security Shield provides one settings page with tabs for:
+Veekay Captcha Shield provides one settings page with tabs for:
 
 * General
 * Cloudflare Turnstile
@@ -245,16 +245,16 @@ The project does not claim guaranteed legal or accessibility compliance.
 
 ## Internationalization
 
-Captcha Security Shield uses the text domain:
+Veekay Captcha Shield uses the text domain:
 
 ```text
-captcha-security-shield
+veekay-captcha-shield
 ```
 
 The generated translation template is:
 
 ```text
-languages/captcha-security-shield.pot
+languages/veekay-captcha-shield.pot
 ```
 
 POT generation excludes generated and development-only directories such as `build`, `vendor`, `tests`, and `coverage`.
@@ -411,7 +411,7 @@ Uninstallation does not contact external CAPTCHA providers or revoke credentials
 * [Technical requirements](TECHNICAL_REQUIREMENTS.md)
 * [Coding standards](CODING_STANDARDS.md)
 * [Contributing](CONTRIBUTING.md)
-* [User documentation](https://velukuberan.github.io/captcha-security-shield/)
+* [User documentation](https://velukuberan.github.io/veekay-captcha-shield/)
 
 The project documents have the following priority when resolving conflicts:
 
@@ -422,7 +422,7 @@ The project documents have the following priority when resolving conflicts:
 
 ## License
 
-Captcha Security Shield is free software distributed under the terms of the GNU General Public License version 3 or, at your option, any later version.
+Veekay Captcha Shield is free software distributed under the terms of the GNU General Public License version 3 or, at your option, any later version.
 
 See [LICENSE](LICENSE) for the complete license text.
 

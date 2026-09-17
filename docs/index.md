@@ -1,5 +1,5 @@
 ---
-title: Captcha Security Shield documentation
+title: Veekay Captcha Shield documentation
 ---
 
 <section class="hero">

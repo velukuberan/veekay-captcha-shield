@@ -1,6 +1,6 @@
 # Configure CAPTCHA for protected forms
 
-Captcha Security Shield uses the same provider-selection model for all supported forms.
+Veekay Captcha Shield uses the same provider-selection model for all supported forms.
 
 For each form, you can:
 
@@ -30,7 +30,7 @@ WooCommerce protection is available only when WooCommerce is active.
 
 ## Use the global default
 
-In **Settings → Captcha Security Shield**:
+In **Settings → Veekay Captcha Shield**:
 
 1. select the desired **Default provider**;
 2. set the form you want to protect to **Use default**;

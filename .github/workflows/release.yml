@@ -70,7 +70,7 @@ jobs:
 
       - name: Stage plugin files
         run: |
-          SLUG=captcha-security-shield
+          SLUG=veekay-captcha-shield
           mkdir -p "build/${SLUG}"
 
           rsync -av \
@@ -81,7 +81,7 @@ jobs:
 
       - name: Minify production JavaScript
         run: |
-          find build/captcha-security-shield/assets/js \
+          find build/veekay-captcha-shield/assets/js \
             -type f \
             -name '*.js' \
             -print0 |
@@ -94,7 +94,7 @@ jobs:
 
       - name: Minify production CSS
         run: |
-          find build/captcha-security-shield/assets/css \
+          find build/veekay-captcha-shield/assets/css \
             -type f \
             -name '*.css' \
             -print0 |
@@ -109,7 +109,7 @@ jobs:
       - name: Create zip
         id: zip
         run: |
-          SLUG=captcha-security-shield
+          SLUG=veekay-captcha-shield
           LABEL="${{ steps.version.outputs.label }}"
           ZIP_NAME="${SLUG}-${LABEL}.zip"
 

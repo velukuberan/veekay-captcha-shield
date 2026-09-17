@@ -1,17 +1,17 @@
 <?php
 
 /**
- * Plugin Name:       Captcha Security Shield
- * Plugin URI:        https://github.com/velukuberan/captcha-security-shield
+ * Plugin Name:       Veekay Captcha Shield
+ * Plugin URI:        https://github.com/velukuberan/veekay-captcha-shield
  * Description:       Protects selected WordPress and WooCommerce forms using configurable CAPTCHA providers.
  * Version:           1.0.0
- * Requires at least: 6.7.0
+ * Requires at least: 6.7
  * Requires PHP:      8.1
  * Author:            Velmurugan Kuberan
  * Author URI:        https://vkuberan.in
  * License:           GPL-3.0-or-later
  * License URI:       https://www.gnu.org/licenses/gpl-3.0.html
- * Text Domain:       captcha-security-shield
+ * Text Domain:       veekay-captcha-shield
  *
  * @package WpCaptchaShield
  */

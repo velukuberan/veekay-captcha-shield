@@ -1,5 +1,5 @@
 {
-  "name": "captcha-security-shield",
+  "name": "veekay-captcha-shield",
   "private": true,
   "scripts": {
     "minify:js": "terser"
